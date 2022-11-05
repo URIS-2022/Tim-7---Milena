@@ -377,7 +377,7 @@ namespace FastReport.Barcode
         }  
       }
 
-      return bld;
+      return bld.ToString();
     }
 
     private string Encode(string code)
