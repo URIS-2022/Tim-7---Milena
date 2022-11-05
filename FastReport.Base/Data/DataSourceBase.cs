@@ -819,11 +819,14 @@ namespace FastReport.Data
         columns = new Column[expressions.Length];
         for (int i = 0; i < expressions.Length; i++)
         {
-          string expr = expressions[i];
-          if (expr.StartsWith("[") && expr.EndsWith("]"))
-            expr = expr.Substring(1, expr.Length - 2);
-                    Column column = DataHelper.GetColumn(this.report.Dictionary, expr);
-                    DataSourceBase datasource = DataHelper.GetDataSource(this.report.Dictionary, expr);
+            string expr = expressions[i];
+            if (expr.StartsWith("[") && expr.EndsWith("]"))
+                    {
+                        expr = expr.Substring(1, expr.Length - 2);
+                    }
+             Column column = DataHelper.GetColumn(this.report.Dictionary, expr);
+            DataSourceBase datasource = DataHelper.GetDataSource(this.report.Dictionary, expr);
+
           if (column != null && column.Parent == datasource)
             columns[i] = column;
           else
