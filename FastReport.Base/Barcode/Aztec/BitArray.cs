@@ -190,7 +190,7 @@ namespace FastReport.Barcode.Aztec
       {
          if (end < start)
          {
-            throw new ArgumentException();
+            throw new ArgumentException("Argument exception");
          }
          if (end == start)
          {
