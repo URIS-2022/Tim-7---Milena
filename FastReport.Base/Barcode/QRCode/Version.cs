@@ -183,7 +183,7 @@ namespace FastReport.Barcode.QRCode
         
       }
       //UPGRADE_NOTE: Final was removed from the declaration of 'count '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
-      private int count;
+      private readonly int count;
       //UPGRADE_NOTE: Final was removed from the declaration of 'dataCodewords '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
       private int dataCodewords;
       
