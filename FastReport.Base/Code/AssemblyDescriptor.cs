@@ -727,9 +727,7 @@ namespace FastReport.Code
                 catch
                 {
                 }
-            }
-            // Commented by Samuray
-            //Directory.SetCurrentDirectory(currentFolder);
+            }       
         }
 
         static AssemblyDescriptor()
