@@ -168,7 +168,7 @@ namespace FastReport.Data
                         }
                         catch (Exception ex)
                         {
-
+                            Console.WriteLine("Exception occurred");
                         }
                     }
 
