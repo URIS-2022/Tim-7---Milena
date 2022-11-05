@@ -14,7 +14,7 @@ namespace FastReport.Export.PdfSimple.PdfCore
         private const int BASE = 65521;
         private const int NMAX = 5552;
         private bool compress = true;
-        private byte[] stream;
+        private byte[] stream { get; set }
 
         #endregion Private Fields
 
@@ -24,17 +24,6 @@ namespace FastReport.Export.PdfSimple.PdfCore
         /// Gets or sets compress for this stream
         /// </summary>
         public bool Compress { get { return compress; } set { compress = value; } }
-
-        /// <summary>
-        /// The stream of this object
-        /// </summary>
-        public byte[] Stream
-        {
-            set
-            {
-                this.stream = value;
-            }
-        }
 
         #endregion Public Properties
 
