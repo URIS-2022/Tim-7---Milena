@@ -119,14 +119,6 @@ namespace FastReport.JsonClassGenerator
 
         }
 
-        private void WriteClassesToFile(string path, IEnumerable<JsonType> types)
-        {
-            using (var sw = new StreamWriter(path, false, Encoding.UTF8))
-            {
-                WriteClassesToFile(sw, types);
-            }
-        }
-
         private void WriteClassesToFile(TextWriter sw, IEnumerable<JsonType> types)
         {
             var inNamespace = false;
