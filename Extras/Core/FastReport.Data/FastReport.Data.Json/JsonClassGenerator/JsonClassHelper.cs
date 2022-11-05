@@ -141,10 +141,7 @@ namespace FastReport.JsonClassGenerator
 
         }
 
-
-        public delegate T ValueReader<T>(JToken token);
-
-
+        public delegate T ValueReader<T out>(JToken token);
 
         public static T[] ReadArray<T>(JToken token, ValueReader<T> reader)
         {
