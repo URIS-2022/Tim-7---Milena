@@ -126,6 +126,7 @@ namespace FastReport.Data.JsonConnection
         /// <inheritdoc/>
         public override void CreateRelations()
         {
+            throw new NotSupportedException();
         }
 
         /// <inheritdoc/>
