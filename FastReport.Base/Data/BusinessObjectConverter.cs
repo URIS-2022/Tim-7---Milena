@@ -14,6 +14,7 @@ namespace FastReport.Data
   public enum BOConverterFlags
   {
     /// <summary>
+    /// komentar.
     /// Specifies no actions.
     /// </summary>
     None,
