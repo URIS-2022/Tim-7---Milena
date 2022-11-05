@@ -1152,7 +1152,7 @@ namespace FastReport
         /// <summary>
         /// Initializes a new instance of the <b>Base</b> class with default settings. 
         /// </summary>
-        public Base()
+        protected Base()
         {
             name = "";
             alias = "";
