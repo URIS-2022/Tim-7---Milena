@@ -37,7 +37,7 @@ namespace FastReport.Barcode.Aztec
       public static GenericGF AZTEC_DATA_8 = DATA_MATRIX_FIELD_256;
       public static GenericGF MAXICODE_FIELD_64 = AZTEC_DATA_6;
 
-      private int[] expTable;
+      private readonly int[] expTable;
       private int[] logTable;
       private GenericGFPoly zero;
       private GenericGFPoly one;
