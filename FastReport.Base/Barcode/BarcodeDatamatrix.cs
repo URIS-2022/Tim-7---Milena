@@ -1195,7 +1195,7 @@ namespace FastReport.Barcode
       }
     }
 
-    private class ReedSolomon
+    private static class ReedSolomon
     {
 
       private static readonly int[] log = {

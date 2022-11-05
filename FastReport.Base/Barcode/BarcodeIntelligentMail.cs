@@ -153,7 +153,7 @@ namespace FastReport.Barcode
             encoded = "";
             for (int i = 0; i <= 64; i++)
             {
-                //if (ai[i] == 0) encoded += (ai1[i] == 0) ? "T" : "D";
+                
                 //else encoded += (ai1[i] == 0) ? "A" : "F";
                 if (ai[i] == 0)
                     encoded += (ai1[i] == 0) ? "E" : "G";

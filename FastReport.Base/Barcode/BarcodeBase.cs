@@ -94,7 +94,7 @@ namespace FastReport.Barcode
         /// <summary>
         /// Initializes a new instance of the <see cref="BarcodeBase"/> class with default settings.
         /// </summary>
-        public BarcodeBase()
+        protected BarcodeBase()
         {
             text = "";
             color = Color.Black;
