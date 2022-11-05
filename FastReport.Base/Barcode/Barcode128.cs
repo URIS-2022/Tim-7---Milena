@@ -364,7 +364,7 @@ namespace FastReport.Barcode
     
     private string StripControlCodes(string code, bool stripFNCodes)
     {
-      string result = "";
+      StringBuilder bld = new StringBuilder();
       int index = 0;
 
       while (index < code.Length)
@@ -373,11 +373,11 @@ namespace FastReport.Barcode
         if (nextChar != "&A;" && nextChar != "&B;" && nextChar != "&C;" && nextChar != "&S;")
         {
           if (!stripFNCodes || (nextChar != "&1;" && nextChar != "&2;" && nextChar != "&3;" && nextChar != "&4;"))
-            result += nextChar;
+                        bld.Append(nextChar);
         }  
       }
 
-      return result;
+      return bld;
     }
 
     private string Encode(string code)
