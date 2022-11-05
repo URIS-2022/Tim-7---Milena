@@ -17,7 +17,7 @@ namespace FastReport.Data
         private string host;
         private string username;
         private string password;
-        private string connectionString;
+        private string readonly connectionString;
 
         #endregion Fields
 
