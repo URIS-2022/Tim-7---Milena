@@ -329,13 +329,13 @@ namespace FastReport.Web
                             //string fileName = context.Request.MapPath(baseReportFile, webReport.Prop.ReportPath, true);
                             if (!Path.IsPathRooted(baseReportFile))
                                 baseReportFile = Path.GetFullPath(Path.GetDirectoryName(Report.FileName) + Path.DirectorySeparatorChar + baseReportFile); //was ReportPath before(ToDo)
-
-                            if (File.Exists(baseReportFile))
+                            switch (baseReportFile)
                             {
-                                baseReport = File.ReadAllText(baseReportFile, Encoding.UTF8);
-                            }
-                            else
-                                baseReport = String.Empty;
+                                case File.Exists(baseReportFile):
+                                    baseReport = File.ReadAllText(baseReportFile, Encoding.UTF8);
+                                default:
+                                    baseReport = String.Empty;
+                            }                            
                         }
                     }
                 }
@@ -346,10 +346,13 @@ namespace FastReport.Web
                     string s = reportInheritance[i];
                     responseBuilder.Append('\"');
                     responseBuilder.Append(s.Replace("\r\n", "").Replace("\"", "\\\""));
-                    if (i > 0)
-                        responseBuilder.Append("\",");
-                    else
-                        responseBuilder.Append('\"');
+                    switch (i) 
+                    {
+                        case i > 0:
+                            responseBuilder.Append("\",");
+                        default:
+                            responseBuilder.Append('\"');
+                    }
                 }
                 responseBuilder.Append("]}");
 
