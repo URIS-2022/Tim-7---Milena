@@ -146,7 +146,7 @@ namespace FastReport.JsonClassGenerator
         public static T[] ReadArray<T>(JToken token, ValueReader<T> reader)
         {
             var value = GetJToken<JArray>(token);
-            if (value == null) return null;
+            if (value == null) return new T[0];
 
             var array = new T[value.Count];
             for (int i = 0; i < array.Length; i++)
