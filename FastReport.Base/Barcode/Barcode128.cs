@@ -370,9 +370,8 @@ namespace FastReport.Barcode
       while (index < code.Length)
       {
         string nextChar = GetNextChar(code, ref index, Encoding.None);
-        if (nextChar != "&A;" && nextChar != "&B;" && nextChar != "&C;" && nextChar != "&S;")
+        if (nextChar != "&A;" && nextChar != "&B;" && nextChar != "&C;" && nextChar != "&S;" && !stripFNCodes || (nextChar != "&1;" && nextChar != "&2;" && nextChar != "&3;" && nextChar != "&4;"))
         {
-          if (!stripFNCodes || (nextChar != "&1;" && nextChar != "&2;" && nextChar != "&3;" && nextChar != "&4;"))
                         bld.Append(nextChar);
         }  
       }
