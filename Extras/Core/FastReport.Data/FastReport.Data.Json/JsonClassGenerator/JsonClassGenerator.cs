@@ -201,12 +201,9 @@ namespace FastReport.JsonClassGenerator
                     foreach (var obj in examples)
                     {
                         JToken value;
-                        if (obj.TryGetValue(field.Key, out value))
+                        if (obj.TryGetValue(field.Key, out value) && value.Type == JTokenType.Object)
                         {
-                            if (value.Type == JTokenType.Object)
-                            {
                                 subexamples.Add((JObject)value);
-                            }
                         }
                     }
 
