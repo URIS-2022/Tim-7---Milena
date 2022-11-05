@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FastReport.OpenSource.MVC
 {
-    public class Program
+    public static class Program
     {
         static Process xvfb;
         const string xvfb_pid = "pid.xvfb.fr";
