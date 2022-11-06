@@ -421,7 +421,7 @@ namespace FastReport.Utils
   /// <summary>
   /// Localized CategoryAttribute class.
   /// </summary>
-  public class SRCategory : CategoryAttribute
+  public class SRCategoryAttribute : CategoryAttribute
   {
     /// <inheritdoc/>
     protected override string GetLocalizedString(string value)
@@ -433,7 +433,7 @@ namespace FastReport.Utils
     /// Initializes a new instance of the SRCategory class.
     /// </summary>
     /// <param name="value">The category name.</param>
-    public SRCategory(string value)
+    public SRCategoryAttribute(string value)
       : base(value)
     {
     }

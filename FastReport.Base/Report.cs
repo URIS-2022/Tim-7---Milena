@@ -352,7 +352,7 @@ namespace FastReport
         /// Gets or sets the report information such as report name, author, description etc.
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Design")]
+        [SRCategoryAttribute("Design")]
         public ReportInfo ReportInfo
         {
             get { return reportInfo; }
@@ -443,7 +443,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(Language.CSharp)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Script")]
+        [SRCategoryAttribute("Script")]
         public Language ScriptLanguage
         {
             get { return scriptLanguage; }
@@ -471,7 +471,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Engine")]
+        [SRCategoryAttribute("Engine")]
         public bool ConvertNulls
         {
             get { return convertNulls; }
@@ -490,7 +490,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Engine")]
+        [SRCategoryAttribute("Engine")]
         public bool DoublePass
         {
             get { return doublePass; }
@@ -506,7 +506,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public bool Compressed
         {
             get { return compressed; }
@@ -527,7 +527,7 @@ namespace FastReport
         /// </summary>
         [DefaultValue(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Engine")]
+        [SRCategoryAttribute("Engine")]
         public bool UseFileCache
         {
             get { return useFileCache; }
@@ -543,7 +543,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(TextQuality.Default)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public TextQuality TextQuality
         {
             get { return textQuality; }
@@ -556,7 +556,7 @@ namespace FastReport
         /// </summary>
         [DefaultValue(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public bool SmoothGraphics
         {
             get { return smoothGraphics; }
@@ -591,7 +591,7 @@ namespace FastReport
         /// you want to fill the DataSet by yourself.
         /// </remarks>
         [DefaultValue(true)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public bool AutoFillDataSet
         {
             get { return autoFillDataSet; }
@@ -605,7 +605,7 @@ namespace FastReport
         /// Use this property to limit the number of pages in a prepared report.
         /// </remarks>
         [DefaultValue(0)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public int MaxPages
         {
             get { return maxPages; }
@@ -616,7 +616,7 @@ namespace FastReport
         /// Gets or sets the collection of styles used in this report.
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Misc")]
+        [SRCategoryAttribute("Misc")]
         public StyleCollection Styles
         {
             get { return styles; }
@@ -632,7 +632,7 @@ namespace FastReport
         /// from another assemblies, you have to add them to this property.
         /// </remarks>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Script")]
+        [SRCategoryAttribute("Script")]
         public string[] ReferencedAssemblies
         {
             get { return referencedAssemblies; }
@@ -653,7 +653,7 @@ namespace FastReport
         /// Gets or sets a script event name that will be fired when the report starts.
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Build")]
+        [SRCategoryAttribute("Build")]
         public string StartReportEvent
         {
             get { return startReportEvent; }
@@ -664,7 +664,7 @@ namespace FastReport
         /// Gets or sets a script event name that will be fired when the report is finished.
         /// </summary>
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        [SRCategory("Build")]
+        [SRCategoryAttribute("Build")]
         public string FinishReportEvent
         {
             get { return finishReportEvent; }
@@ -693,7 +693,7 @@ namespace FastReport
         /// in a file.
         /// </remarks>
         [DefaultValue(true)]
-        [SRCategory("Design")]
+        [SRCategoryAttribute("Design")]
         public bool StoreInResources
         {
             get { return storeInResources; }
@@ -807,7 +807,7 @@ namespace FastReport
         /// Gets or sets the initial page number for PageN/PageNofM system variables.
         /// </summary>
         [DefaultValue(1)]
-        [SRCategory("Engine")]
+        [SRCategoryAttribute("Engine")]
         public int InitialPageNumber
         {
             get { return initialPageNumber; }
