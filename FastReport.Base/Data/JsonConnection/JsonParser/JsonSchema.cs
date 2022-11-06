@@ -112,7 +112,7 @@ namespace FastReport.Data.JsonConnection.JsonParser
         {
             if (obj == null)
             {
-                throw new NullReferenceException("Unable to load schema from non-object");
+                throw new ArgumentNullException("Unable to load schema from non-object");
             }
 
             JsonSchema result = new JsonSchema();
