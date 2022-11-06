@@ -138,11 +138,13 @@ namespace FastReport.Preview
 
     public void Dispose()
     {
-      Clear();
-    }
-#endregion
+            Clear();
+        }
 
-    public SourcePages(PreparedPages preparedPages)
+
+        #endregion
+
+        public SourcePages(PreparedPages preparedPages)
     {
             this.preparedPages = preparedPages;
       pages = new List<ReportPage>();
