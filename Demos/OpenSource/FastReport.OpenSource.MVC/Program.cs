@@ -41,7 +41,10 @@ namespace FastReport.OpenSource.MVC
                     xvfb.Kill();
                     xvfb = null;
                 }
-                catch {  }
+                catch (Exception ex)
+                {  
+                    throw new Exception("Some error occured", ex);
+                }
                 File.Delete(xvfb_pid);
             }
             string display = Environment.GetEnvironmentVariable("DISPLAY");
