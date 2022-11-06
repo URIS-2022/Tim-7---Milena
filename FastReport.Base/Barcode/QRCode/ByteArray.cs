@@ -78,21 +78,22 @@ namespace FastReport.Barcode.QRCode
                 bytes[index] = (sbyte)value_Renamed;
             }
         }
-    
-    public int size()
+        public void set_Renamed(sbyte[] source, int offset, int count)
+        {
+            bytes = new sbyte[count];
+            size_Renamed_Field = count;
+            for (int x = 0; x < count; x++)
+            {
+                bytes[x] = source[offset + x];
+            }
+        }
+
+        public int size()
     {
       return size_Renamed_Field;
     }
     
     // Copy count bytes from array source starting at offset.
-    public void  set_Renamed(sbyte[] source, int offset, int count)
-    {
-      bytes = new sbyte[count];
-      size_Renamed_Field = count;
-      for (int x = 0; x < count; x++)
-      {
-        bytes[x] = source[offset + x];
-      }
-    }
+    
   }
 }
