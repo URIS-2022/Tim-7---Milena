@@ -155,7 +155,7 @@ namespace FastReport.Barcode
     private const int NUMERIC_MODE = 902;
     private const int ABSOLUTE_MAX_TEXT_SIZE = 5420;
     private const int MAX_DATA_CODEWORDS = 926;
-    private const int MACRO_SEGMENT_ID = 928;
+    
     private const int MACRO_LAST_SEGMENT = 922;
 
     private const string MIXED_SET = "0123456789&\r\t,:#-.$/+%*=^";
