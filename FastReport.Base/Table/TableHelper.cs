@@ -393,7 +393,7 @@ namespace FastReport.Table
         }
 
 
-        private class SpanData
+        private sealed class SpanData
         {
             public TableCell originalCell;
             public TableCellData resultCell;
