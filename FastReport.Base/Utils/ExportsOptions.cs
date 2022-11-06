@@ -63,7 +63,6 @@ namespace FastReport.Utils
             private const string EXPORT_ITEM_PREFIX = "Export,";
             private const string ITEM_POSTFIX = ",Name";
             private const string EXPORT_ITEM_POSTFIX = ",File";
-            private const string CATEGORY_PREFIX = "Export,ExportGroups,";
 
             private readonly string name;
             private readonly List<ExportsTreeNode> nodes = new List<ExportsTreeNode>();
