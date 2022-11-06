@@ -17,6 +17,7 @@ using System.Collections.Concurrent;
 using FastReport.Data;
 using FastReport.Engine;
 using FastReport.Utils;
+using System.Linq;
 #if SKIA
 using HMACSHA1 = FastReport.Utils.DetravHMACSHA1;
 #endif
@@ -484,10 +485,8 @@ namespace FastReport.Code
             if (parts.Length == 3)
             {
                 string[] expressions = (text as Base).GetExpressions();
-                foreach (string expr in expressions)
-                {
-                    if (expr.Contains(parts[1]))
-                    {
+                foreach (string expr in expressions.Where(x=>x.Contains(parts[1])))
+                {                   
                         if (!DataHelper.IsValidColumn(Report.Dictionary, expr))
                         {
                             string replaceString = text.Brackets[0] + expr + text.Brackets[2];
@@ -500,8 +499,7 @@ namespace FastReport.Code
                             {
                                 result = result.Replace(replaceString, error);
                             }
-                        }
-                    }
+                        }                   
                 }
             }
             return result;
