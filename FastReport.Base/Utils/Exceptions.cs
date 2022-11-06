@@ -1,12 +1,18 @@
 using System;
+using System.Runtime.Serialization;
 
 namespace FastReport.Utils
 {
     /// <summary>
     /// The exception that is thrown when the user tried to set object's name that is already exists.
     /// </summary>
+    [Serializable]
     public class DuplicateNameException : Exception
     {
+        protected DuplicateNameException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+
+        }
         internal DuplicateNameException(string name)
           : base(String.Format(Res.Get("Messages,DuplicateName"), name))
         {
