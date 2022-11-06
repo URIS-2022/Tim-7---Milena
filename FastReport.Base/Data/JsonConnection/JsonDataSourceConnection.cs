@@ -237,7 +237,7 @@ namespace FastReport.Data.JsonConnection
                     }
 
                 }
-                obj = JsonBase.FromString(jsonText) as JsonBase;
+                obj = JsonBase.FromString(jsonText);
             }
 
             string schema = builder.JsonSchema;

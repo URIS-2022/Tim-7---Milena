@@ -1550,7 +1550,7 @@ namespace FastReport.Barcode
       codePage = 437;
     }
 
-    private class Segment
+    private sealed class Segment
     {
       public char type;
       public int start;

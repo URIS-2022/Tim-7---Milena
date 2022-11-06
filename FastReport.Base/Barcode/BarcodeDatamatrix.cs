@@ -1040,7 +1040,7 @@ namespace FastReport.Barcode
     }
 
 
-    private class DmParams
+    private sealed class DmParams
     {
       internal DmParams(int height, int width, int heightSection, int widthSection, int dataSize, int dataBlock, int errorBlock)
       {
@@ -1062,7 +1062,7 @@ namespace FastReport.Barcode
       internal int errorBlock;
     };
 
-    private class Placement
+    private sealed class Placement
     {
       private int nrow;
       private int ncol;
