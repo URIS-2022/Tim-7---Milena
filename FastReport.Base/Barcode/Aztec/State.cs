@@ -80,13 +80,13 @@ namespace FastReport.Barcode.Aztec
       public State latchAndAppend(int mode, int value)
       {
          //assert binaryShiftByteCount == 0;
-         int bitCount = this.bitCount;
+         int bitCounting = this.bitCount;
          Token token = this.token;
          if (mode != this.mode)
          {
             int latch = HighLevelEncoder.LATCH_TABLE[this.mode][mode];
             token = token.add(latch & 0xFFFF, latch >> 16);
-            bitCount += latch >> 16;
+            bitCounting += latch >> 16;
          }
          int latchModeBitCount = mode == HighLevelEncoder.MODE_DIGIT ? 4 : 5;
          token = token.add(value, latchModeBitCount);
