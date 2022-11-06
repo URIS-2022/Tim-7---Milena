@@ -69,7 +69,7 @@ namespace FastReport.Barcode.Aztec
          {
             if (width != height)
             {
-               throw new System.ArgumentException("Can't call getDimension() on a non-square matrix");
+                    return -1;
             }
             return width;
          }
