@@ -20,7 +20,7 @@ namespace FastReport.CrossView
   public class CrossViewHeaderDescriptor : CrossViewDescriptor
   {
     #region Fields
-    internal string fieldName = "";
+    internal string fieldName;
     internal string measureName = "";
     internal bool isGrandTotal;
     internal bool isTotal;
