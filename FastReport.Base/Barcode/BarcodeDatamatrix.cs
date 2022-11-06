@@ -1062,7 +1062,7 @@ namespace FastReport.Barcode
       internal int errorBlock;
     };
 
-    private class Placement
+    private sealed class Placement
     {
       private int nrow;
       private int ncol;
