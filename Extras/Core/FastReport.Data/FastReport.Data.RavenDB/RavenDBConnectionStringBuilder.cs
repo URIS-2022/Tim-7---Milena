@@ -35,11 +35,8 @@ namespace FastReport.Data
         /// <summary>
         /// Gets or sets the username.
         /// </summary>
-        public string CertificatePath
-        {
-            get { return certificatePath; }
-            set { certificatePath = value; }
-        }
+        public string CertificatePath { get; set; }
+        
 
         /// <summary>
         /// Gets or sets the password.
