@@ -26,11 +26,8 @@ namespace FastReport.Data
         /// <summary>
         /// Gets or sets the host.
         /// </summary>
-        public string Host
-        {
-            get { return host; }
-            set { host = value; }
-        }
+        public string Host { get; set; }
+        
 
         /// <summary>
         /// Gets or sets the username.
