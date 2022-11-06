@@ -392,14 +392,9 @@ namespace FastReport.Barcode
             CombinedAddress
         }
 
-        [Serializable]
         public class SwissQrCodeContactException : SwissQrCodeException
         {
             public SwissQrCodeContactException()
-            {
-            }
-
-            protected SwissQrCodeContactException(SerializationInfo info, StreamingContext context) : base(info, context)
             {
             }
 

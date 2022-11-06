@@ -90,7 +90,7 @@ namespace FastReport.Preview
     {
       while (pages.Count > 0)
       {
-        pages[0].Dispose(true);
+        pages[0].Dispose();
         pages.RemoveAt(0);
       }
     }
@@ -138,15 +138,10 @@ namespace FastReport.Preview
 
     public void Dispose()
     {
-        Dispose(true);
-        GC.SuppressFinalize(this);
+            Clear();
+        }
 
-    }
 
-    protected virtual void Dispose(bool disposing)
-    {
-       Clear()
-    }
         #endregion
 
         public SourcePages(PreparedPages preparedPages)
