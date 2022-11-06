@@ -1194,17 +1194,17 @@ namespace FastReport.Barcode
         v = segmentList.Get(k);
         vp = segmentList.Get(k - 1);
         vn = segmentList.Get(k + 1);
-        if (CheckSegmentType(v, 'B') && GetSegmentLength(v) == 1)
-        {
-          if (CheckSegmentType(vp, 'T') && CheckSegmentType(vn, 'T')
+        if (CheckSegmentType(v, 'B') && GetSegmentLength(v) == 1 && CheckSegmentType(vp, 'T') && CheckSegmentType(vn, 'T')
               && GetSegmentLength(vp) + GetSegmentLength(vn) >= 3)
-          {
+        {
+          
+          
             vp.end = vn.end;
             segmentList.Remove(k);
             segmentList.Remove(k);
             k = -1;
             continue;
-          }
+          
         }
       }
       //merge text sections
