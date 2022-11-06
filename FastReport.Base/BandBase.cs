@@ -1046,7 +1046,7 @@ namespace FastReport
         /// <summary>
         /// Initializes a new instance of the <see cref="BandBase"/> class with default settings.
         /// </summary>
-        public BandBase()
+        protected BandBase()
         {
             objects = new ReportComponentCollection(this);
             guides = new FloatCollection();
