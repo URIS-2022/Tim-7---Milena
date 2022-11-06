@@ -14,10 +14,7 @@ namespace FastReport.Gauge.Radial
             Parent = parent as RadialGauge;
         }
 
-        public override void Assign(GaugeLabel src)
-        {
-            base.Assign(src);
-        }
+        
 
         
 
