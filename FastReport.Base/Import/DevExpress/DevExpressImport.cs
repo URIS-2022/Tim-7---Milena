@@ -1034,7 +1034,10 @@ namespace FastReport.Import.DevExpress
                 devDoc = new System.Xml.XmlDocument();
                 devDoc.LoadXml(devText);
             }
-            catch { }
+            catch {
+
+                Console.WriteLine("This is catch block, that I made for URIS!");
+            }
 
             page = ComponentsFactory.CreateReportPage(Report);
 
