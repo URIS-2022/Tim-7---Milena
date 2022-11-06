@@ -102,7 +102,7 @@ namespace FastReport.Table
 
             while (startRow + rowsFit < Rows.Count &&
               (rowsFit == 0 || !Rows[startRow + rowsFit].PageBreak) &&
-              (!this.CanBreak | GetRowsHeight(startRow, rowsFit + 1) <= freeSpace + 0.1f))
+              (!this.CanBreak || GetRowsHeight(startRow, rowsFit + 1) <= freeSpace + 0.1f))
             {
                 if (keeping)
                 {
