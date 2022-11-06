@@ -231,14 +231,7 @@ namespace FastReport.Barcode.Aztec
                }
             }
          }
-         /*
-         State minState = Collections.min(states, new Comparator<State>() {
-            @Override
-            public int compare(State a, State b) {
-               return a.getBitCount() - b.getBitCount();
-            }
-         });
-             */
+   
          // Convert it to a bit array, and return.
          return minState.toBitArray(text);
       }

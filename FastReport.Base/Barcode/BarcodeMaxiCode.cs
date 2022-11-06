@@ -550,8 +550,6 @@ namespace FastReport.Barcode
             // initialize the set and character arrays
             if (!processText())
             {
-                //error_msg = "Input data too long";
-                //return false;
                 throw new Exception("Input data too long");
             }
 

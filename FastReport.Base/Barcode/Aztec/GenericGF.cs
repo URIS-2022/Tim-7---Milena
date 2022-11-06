@@ -38,7 +38,7 @@ namespace FastReport.Barcode.Aztec
       public static GenericGF MAXICODE_FIELD_64 = AZTEC_DATA_6;
 
       private readonly int[] expTable;
-      private int[] logTable;
+      private readonly int[] logTable;
       private GenericGFPoly zero;
       private GenericGFPoly one;
       private readonly int size;
@@ -109,7 +109,7 @@ namespace FastReport.Barcode.Aztec
       {
          if (degree < 0)
          {
-            throw new ArgumentException();
+            throw new ArgumentException("Exception");
          }
          if (coefficient == 0)
          {

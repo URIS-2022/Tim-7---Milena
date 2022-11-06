@@ -332,7 +332,7 @@ namespace FastReport.Barcode.Aztec
          }
          if (bitsOffset == bits.Length)
          {
-            return null;
+                return new int[0];
          }
          int y = bitsOffset / rowSize;
          int x = (bitsOffset % rowSize) << 5;

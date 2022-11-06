@@ -307,6 +307,10 @@ namespace FastReport.Barcode
             return result;
         }
 
+
+        /// <summary>
+        /// Describe your member here.
+        /// </summary>
         public BarcodeDeutscheLeitcode()
         {
             ratioMin = 2.25F;

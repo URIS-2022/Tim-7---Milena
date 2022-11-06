@@ -125,9 +125,14 @@ namespace FastReport.Barcode.Aztec
             bitCount += latch >> 16;
             mode = HighLevelEncoder.MODE_UPPER;
          }
-         int deltaBitCount =
-            (binaryShiftByteCount == 0 || binaryShiftByteCount == 31) ? 18 :
-               (binaryShiftByteCount == 62) ? 9 : 8;
+         int deltaBitCount;
+         if (binaryShiftByteCount == 0 || binaryShiftByteCount == 31)
+             deltaBitCount = 18;
+         else if (binaryShiftByteCount == 62)
+             deltaBitCount = 9;
+         else
+             deltaBitCount = 8;
+
          State result = new State(token, mode, binaryShiftByteCount + 1, bitCount + deltaBitCount);
          if (result.binaryShiftByteCount == 2047 + 31)
          {

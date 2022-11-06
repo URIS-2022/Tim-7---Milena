@@ -77,7 +77,6 @@ namespace FastReport.Barcode
 
 
         #region Fields
-        private int angle;
         private bool autoSize;
         private BarcodeBase barcode;
         private string dataColumn;
@@ -621,8 +620,9 @@ namespace FastReport.Barcode
                     origRect = this.Bounds;
                     UpdateAutoSize();
                 }
-                catch
+                catch(Exception e)
                 {
+                    Console.WriteLine(e);
                 }
             }
         }

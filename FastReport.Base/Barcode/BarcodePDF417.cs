@@ -1107,7 +1107,7 @@ namespace FastReport.Barcode
       int lastP = 0;
       int startN = 0;
       int nd = 0;
-      char c = (char)0;
+      char c;
       int k, j;
       bool lastTxt, txt;
       Segment v;
