@@ -301,7 +301,7 @@ namespace FastReport.Barcode
 
                 if (string.IsNullOrEmpty(houseNumberOrAddressline2))
                     throw new SwissQrCodeContactException(res.Get("SwissAddressLine2Error"));
-                if (!string.IsNullOrEmpty(houseNumberOrAddressline2) && (houseNumberOrAddressline2.Length > 70))
+                if (houseNumberOrAddressline2.Length > 70)
                     throw new SwissQrCodeContactException(String.Format(res.Get("SwissLengthMore"), "Address line 2", 71));
                 if (!string.IsNullOrEmpty(houseNumberOrAddressline2) && !Regex.IsMatch(houseNumberOrAddressline2, charsetPattern))
                     throw new SwissQrCodeContactException(String.Format(res.Get("SwissPatternError"), "Address line 2") + charsetPattern);
