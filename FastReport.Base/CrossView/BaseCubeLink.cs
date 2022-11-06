@@ -35,7 +35,12 @@ namespace FastReport.CrossView
         /// <summary>
         /// 
         /// </summary>
-        public int Cell;
+        private int cell;
+        public int Cell
+        {
+            get { return cell; }
+            set { cell = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
