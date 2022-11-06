@@ -3042,6 +3042,7 @@ namespace FastReport.Utils
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
 #endregion IDisposable Support
