@@ -214,7 +214,7 @@ namespace FastReport.Matrix
     {
       object value = GetValue(columnIndex, rowIndex, cellIndex);
       if (value == null)
-        return null;
+        return new ArrayList();
       if (value is ArrayList)
         return (ArrayList)value;
       ArrayList list = new ArrayList();
