@@ -621,11 +621,8 @@ namespace FastReport.Barcode
     /// should be set to desired aspect ratio.
     /// </remarks>
     [DefaultValue(0)]
-    public int Columns
-    {
-      get { return columns; }
-      set { columns = value; }
-    }
+    public int Columns { get; set; }
+    
 
     /// <summary>
     /// Gets or sets the number of barcode data rows.
