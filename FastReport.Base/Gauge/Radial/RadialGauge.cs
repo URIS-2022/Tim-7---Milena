@@ -258,7 +258,7 @@ namespace FastReport.Gauge.Radial
             float y = (AbsTop + Border.Width / 2) * e.ScaleY;
             float dx = (Width - Border.Width) * e.ScaleX - 1;
             float dy = (Height - Border.Width) * e.ScaleY - 1;
-            float x1 = x + dx;
+            
             float y1 = y + dy;
 
             Pen pen = e.Cache.GetPen(Border.Color, Border.Width * e.ScaleX, Border.DashStyle);
