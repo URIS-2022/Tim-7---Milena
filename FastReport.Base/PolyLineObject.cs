@@ -66,7 +66,7 @@ namespace FastReport
         /// deprecated
         /// </summary>
         [Browsable(false)]
-        [Obsolete]
+        [Obsolete("Replaced by the automatic starter")]
         public PointF[] PointsArray
         {
             get
@@ -85,7 +85,7 @@ namespace FastReport
         /// deprecated
         /// </summary>
         [Browsable(false)]
-        [Obsolete]
+        [Obsolete("Replaced by the automatic starter,number2")]
         public byte[] PointTypesArray
         {
             get

@@ -14,7 +14,7 @@ namespace FastReport.CrossView
   public partial class CrossViewObject : TableBase
   {
     #region Fields
-    //private FastCubeSource fastCubeSource;
+    
     private CubeSourceBase cubeSource;
     private bool showTitle;
     private bool showXAxisFieldsCaption;

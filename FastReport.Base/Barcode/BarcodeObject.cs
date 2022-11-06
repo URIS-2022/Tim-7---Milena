@@ -182,11 +182,8 @@ namespace FastReport.Barcode
         /// </summary>
         [DefaultValue(0)]
         [Category("Appearance")]
-        public int Angle
-        {
-            get { return angle; }
-            set { angle = value; }
-        }
+        public int Angle { get; set; }
+        
 
         /// <summary>
         /// Gets or sets a value that determines whether the barcode should handle its width automatically.

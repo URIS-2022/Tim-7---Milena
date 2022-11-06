@@ -531,9 +531,9 @@ namespace FastReport
         {
             // update band width. It is needed for anchor/dock
             ReportPage page = Page as ReportPage;
-            if (page != null && !(page.UnlimitedWidth && IsDesigning))
+            if (page != null && !(page.UnlimitedWidth && IsDesigning) && page.Columns.Count <= 1 || !IsColumnDependentBand)
             {
-                if (page.Columns.Count <= 1 || !IsColumnDependentBand)
+                
                     Width = PageWidth;
             }
         }
@@ -1046,7 +1046,7 @@ namespace FastReport
         /// <summary>
         /// Initializes a new instance of the <see cref="BandBase"/> class with default settings.
         /// </summary>
-        public BandBase()
+        protected BandBase()
         {
             objects = new ReportComponentCollection(this);
             guides = new FloatCollection();

@@ -155,7 +155,7 @@ namespace FastReport.Barcode
     private const int NUMERIC_MODE = 902;
     private const int ABSOLUTE_MAX_TEXT_SIZE = 5420;
     private const int MAX_DATA_CODEWORDS = 926;
-    private const int MACRO_SEGMENT_ID = 928;
+    
     private const int MACRO_LAST_SEGMENT = 922;
 
     private const string MIXED_SET = "0123456789&\r\t,:#-.$/+%*=^";
@@ -621,11 +621,8 @@ namespace FastReport.Barcode
     /// should be set to desired aspect ratio.
     /// </remarks>
     [DefaultValue(0)]
-    public int Columns
-    {
-      get { return columns; }
-      set { columns = value; }
-    }
+    public int Columns { get; set; }
+    
 
     /// <summary>
     /// Gets or sets the number of barcode data rows.
@@ -1194,17 +1191,17 @@ namespace FastReport.Barcode
         v = segmentList.Get(k);
         vp = segmentList.Get(k - 1);
         vn = segmentList.Get(k + 1);
-        if (CheckSegmentType(v, 'B') && GetSegmentLength(v) == 1)
-        {
-          if (CheckSegmentType(vp, 'T') && CheckSegmentType(vn, 'T')
+        if (CheckSegmentType(v, 'B') && GetSegmentLength(v) == 1 && CheckSegmentType(vp, 'T') && CheckSegmentType(vn, 'T')
               && GetSegmentLength(vp) + GetSegmentLength(vn) >= 3)
-          {
+        {
+          
+          
             vp.end = vn.end;
             segmentList.Remove(k);
             segmentList.Remove(k);
             k = -1;
             continue;
-          }
+          
         }
       }
       //merge text sections
