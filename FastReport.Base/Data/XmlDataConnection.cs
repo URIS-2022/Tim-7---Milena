@@ -155,7 +155,7 @@ namespace FastReport.Data
             }
             catch (Exception e)
             {
-                throw e;
+                throw new Exception("Error!",e);
             }
         }
 
