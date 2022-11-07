@@ -713,11 +713,11 @@ namespace FastReport.Barcode
             long left = value / 2013571;
             long right = value % 2013571;
 
-            int leftGroup = 0;
-            CalculateLeftGroup(left);
+            int leftGroup;
+            leftGroup=CalculateLeftGroup(left);
 
-            int rightGroup = 0;
-            CalculateRightGroup(right);
+            int rightGroup;
+            rightGroup=CalculateRightGroup(right);
 
             switch (leftGroup)
             {
