@@ -150,6 +150,7 @@ namespace FastReport.Data.JsonConnection
         /// <inheritdoc/>
         public override void FillTableSchema(DataTable table, string selectCommand, CommandParameterCollection parameters)
         {
+            throw new NotSupportedException();
         }
 
         /// <inheritdoc/>
