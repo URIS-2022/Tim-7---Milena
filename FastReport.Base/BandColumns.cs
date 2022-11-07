@@ -30,7 +30,7 @@ namespace FastReport
     private float width;
     private ColumnLayout layout;
     private int minRowCount;
-    private DataBand band;
+    private readonly DataBand band;
 
     /// <summary>
     /// Gets or sets the number of columns.
