@@ -633,11 +633,8 @@ namespace FastReport.Barcode
     /// should be set to desired aspect ratio.
     /// </remarks>
     [DefaultValue(0)]
-    public int Rows
-    {
-      get { return rows; }
-      set { rows = value; }
-    }
+    public int Rows { get; set; }
+    
 
     /// <summary>
     /// Gets or sets the error level correction used for the barcode.
