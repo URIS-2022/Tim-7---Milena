@@ -337,7 +337,7 @@
     });
 
     $jQval.addMethod("nonalphamin", function (value, element, nonalphamin) {
-        var match;
+        const match;
         if (nonalphamin) {
             match = value.match(/\W/g);
             match = match && match.length >= nonalphamin;
