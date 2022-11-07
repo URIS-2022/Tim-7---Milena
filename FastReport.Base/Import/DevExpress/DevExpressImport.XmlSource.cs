@@ -126,7 +126,7 @@ namespace FastReport.Import.DevExpress
 
                     if (stylePriority == null || !AttributeExist(stylePriority, "UseForeColor"))
                     {
-                        if (component as TextObject != null)
+                        if (component is TextObject)
                         {
                             (component as TextObject).TextColor = (style.TextFill as SolidFill).Color;
                         }
