@@ -25,7 +25,7 @@ namespace FastReport.Barcode.QRCode
   /// </author>
   /// <author>www.Redivivus.in (suraj.supekar@redivivus.in) - Ported from ZXING Java Source 
   /// </author>*/
-  internal sealed class WriterException:System.Exception
+  public sealed class WriterException:System.Exception
   {
     
     public WriterException():base()
