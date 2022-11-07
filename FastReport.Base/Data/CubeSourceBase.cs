@@ -38,7 +38,7 @@ namespace FastReport.Data
     /// </summary>
     public bool MeasuresInXAxis { get { return CubeLink != null ? CubeLink.MeasuresInXAxis : false; } }
     /// <summary>
-    /// 
+    /// dime
     /// </summary>
     public bool MeasuresInYAxis { get { return CubeLink != null ? CubeLink.MeasuresInYAxis : false; } }
     /// <summary>
