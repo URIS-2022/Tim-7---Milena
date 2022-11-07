@@ -682,6 +682,30 @@ namespace FastReport.Barcode
         int[] WidthsEven = { 3, 4, 6, 4, 5, 1, 8 };
         int[] TEven = { 28, 728, 6454, 203, 2408, 1, 16632 };
 
+        private int CalculateLeftGroup(long left)
+        {
+            if (left > 183063) { return 1; }
+            if (left > 820063) { return 2; }
+            if (left > 1000775) { return  3; }
+            if (left > 1491020) { return 4; }
+            if (left > 1979844) { return 5; }
+            if (left > 1996938) { return 6; }
+
+            return 0;
+        }
+
+        private int CalculateRightGroup(long right)
+        {
+            if (right > 183063) { return 1; }
+            if (right > 820063) { return 2; }
+            if (right > 1000775) { return 3; }
+            if (right > 1491020) { return 4; }
+            if (right > 1979844) { return 5; }
+            if (right > 1996938) { return 6; }
+
+            return 0;
+
+        }
         internal override string GetPattern()
         {
             EncodedData = new List<string>();
@@ -690,20 +714,11 @@ namespace FastReport.Barcode
             long right = value % 2013571;
 
             int leftGroup = 0;
-            if (left > 183063) { leftGroup = 1; }
-            if (left > 820063) { leftGroup = 2; }
-            if (left > 1000775) { leftGroup = 3; }
-            if (left > 1491020) { leftGroup = 4; }
-            if (left > 1979844) { leftGroup = 5; }
-            if (left > 1996938) { leftGroup = 6; }
+            CalculateLeftGroup(left);
 
             int rightGroup = 0;
-            if (right > 183063) { rightGroup = 1; }
-            if (right > 820063) { rightGroup = 2; }
-            if (right > 1000775) { rightGroup = 3; }
-            if (right > 1491020) { rightGroup = 4; }
-            if (right > 1979844) { rightGroup = 5; }
-            if (right > 1996938) { rightGroup = 6; }
+            CalculateRightGroup(right);
+
             switch (leftGroup)
             {
                 case 1:
