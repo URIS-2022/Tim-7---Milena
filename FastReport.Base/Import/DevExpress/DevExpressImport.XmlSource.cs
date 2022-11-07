@@ -113,7 +113,7 @@ namespace FastReport.Import.DevExpress
                             (component as TextObject).Font = style.Font;
 
                     if (stylePriority == null || !AttributeExist(stylePriority, "UseTextAlignment"))
-                        if (component as TextObject != null)
+                        if (component is TextObject)
                         {
                             (component as TextObject).HorzAlign = UnitsConverter.ConvertTextAlignmentToHorzAlign(GetAttribute(styleNode, "TextAlignment"));
                             (component as TextObject).VertAlign = UnitsConverter.ConvertTextAlignmentToVertAlign(GetAttribute(styleNode, "TextAlignment"));
