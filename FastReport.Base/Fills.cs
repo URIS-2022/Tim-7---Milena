@@ -631,7 +631,14 @@ namespace FastReport
     public float Blend
     {
       get { return blend; }
-      set { blend = value < 0 ? 0 : value > 1 ? 1 : value; }
+      set {
+            if (value < 0)
+            {
+                blend = 1;
+            }
+            blend = value > 1 ? 1 : value;
+
+          }
     }
     
     /// <summary>
