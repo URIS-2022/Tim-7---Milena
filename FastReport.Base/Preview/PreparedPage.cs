@@ -281,7 +281,7 @@ namespace FastReport.Preview
 
                 using (ReportPage page = ReadPage(Report, item, false, reader))
                 {
-                    if (page.UnlimitedHeight | page.UnlimitedWidth)
+                    if (page.UnlimitedHeight || page.UnlimitedWidth)
                     {
 
                         float maxWidth = 0.0f;
