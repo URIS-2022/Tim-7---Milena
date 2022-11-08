@@ -530,7 +530,7 @@ namespace FastReport.Barcode
         /// <summary>
         /// Initializes a new instance of the <see cref="Barcode2of5Matrix"/> class with default settings.
         /// </summary>
-        public Barcode2of5Matrix()
+        public Barcode2Of5Matrix()
         {
             ratioMin = 2.25f;
             ratioMax = 3;
