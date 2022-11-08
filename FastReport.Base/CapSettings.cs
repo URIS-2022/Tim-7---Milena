@@ -140,7 +140,7 @@ namespace FastReport
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return 1;
         }
 
         /// <summary>
