@@ -2703,8 +2703,11 @@ namespace FastReport.Utils
                 int i = index + 1;
                 bool closed = false;
                 if (i <= to)
-                    if (closed = line[i] == '/')
+                {
+                    closed = line[i] == '/';
+                    if (closed)
                         i++;
+                }                
                 if (i <= to)
                     if (!IsCanBeFirstCharacterInTagName(line[i]))
                         return null;
