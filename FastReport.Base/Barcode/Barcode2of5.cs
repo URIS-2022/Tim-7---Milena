@@ -493,7 +493,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Generates the "2/5 Matrix" barcode.
     /// </summary>
-    public class Barcode2of5Matrix : Barcode2of5Interleaved
+    public class Barcode2Of5Matrix : Barcode2of5Interleaved
     {
         internal override string GetPattern()
         {
