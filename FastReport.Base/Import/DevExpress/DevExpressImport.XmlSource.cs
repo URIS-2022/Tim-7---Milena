@@ -701,7 +701,7 @@ namespace FastReport.Import.DevExpress
                 XmlNode header;
 
                 if(i == 0)
-                    header = headers.Where(x => GetAttribute(x, "Level") == string.Empty).FirstOrDefault();
+                    header = headers.FirstOrDefault(x => GetAttribute(x, "Level") == string.Empty);
                 else
                     header = headers.Where(x => GetAttribute(x, "Level") == level.ToString()).FirstOrDefault();
 
