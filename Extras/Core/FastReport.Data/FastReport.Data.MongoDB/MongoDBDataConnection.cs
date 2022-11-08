@@ -11,7 +11,13 @@ namespace FastReport.Data
 {
     public partial class MongoDBDataConnection : DataConnectionBase
     {
-        public static string dbName = "";
+        private static string dbName = "";
+
+        public static string DbName
+        {
+            get { return dbName; }
+            set { dbName = value; }
+        }
 
         #region Private Methods
         private void ExecuteFillDataTable(BsonDocument doc, DataTable dt, DataRow dr, string parent)
