@@ -19,7 +19,7 @@ namespace FastReport
         private ChildBand child;
         private ReportComponentCollection objects;
         private FloatCollection guides;
-        private bool startNewPage;
+       
         private bool firstRowStartsNewPage;
         private bool printOnBottom;
         private bool keepChild;
