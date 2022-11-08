@@ -382,14 +382,15 @@ namespace FastReport.Barcode
     private string Encode(string code)
     {
       code = StripControlCodes(code, false);
-      string result = "";
       int index = 0;
       Encoding encoding = Encoding.None;
-      
+
+      StringBuilder builder = new StringBuilder();
       while (index < code.Length)
       {
-        result += GetNextPortion(code, ref index, ref encoding);
+        builder.Append(GetNextPortion(code, ref index, ref encoding));
       }
+      string result = builder.ToString();
       
       return result;
     }
