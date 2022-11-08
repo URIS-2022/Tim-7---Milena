@@ -26,7 +26,7 @@ namespace FastReport.OpenSource.MVC
             FastReport.Utils.Config.WebMode = true;
             services.AddMvc();
             services.AddDbContext<FastreportContext>(ServiceLifetime.Singleton);
-            //services.AddEntityFrameworkSqlite();
+           
 
         }
 
