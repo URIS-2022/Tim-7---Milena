@@ -284,9 +284,9 @@ namespace FastReport.Code
         /// <returns>The expression if found; otherwise, returns null.</returns>
         public static string GetExpression(FindTextArgs args, bool skipStrings)
         {
-            if (args.StartIndex < args.Text.Length)
+            if (args.StartIndex < args.Text.Length && FindMatchingBrackets(args, skipStrings))
             {
-                if (FindMatchingBrackets(args, skipStrings))
+            
                     return args.FoundText;
             }
             return null;
