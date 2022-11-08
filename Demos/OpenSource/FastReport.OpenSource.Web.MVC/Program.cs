@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace FastReport.OpenSource.Web.MVC
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
