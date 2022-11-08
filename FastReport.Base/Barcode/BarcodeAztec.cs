@@ -50,7 +50,7 @@ namespace FastReport.Barcode
 
         internal override void Draw2DBarcode(IGraphics g, float kx, float ky)
         {
-            Brush light = Brushes.White;
+           
             Brush dark = new SolidBrush(Color);     
 
             for (int y = 0; y < matrix.Height; y++)
