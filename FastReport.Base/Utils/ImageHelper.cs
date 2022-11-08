@@ -255,8 +255,6 @@ namespace FastReport.Utils
             }
 
             var newBitmap = new Bitmap(image, new Size((int)width, (int)height));
-            if (newBitmap == null)
-                return false;
 
             // save the resized png into a memory stream for future use
             using (MemoryStream memoryStream = new MemoryStream())
