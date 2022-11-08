@@ -550,7 +550,7 @@ namespace FastReport
         {
             float minTop = Height;
             float maxBottom = 0;
-            float minHeight = Height;
+            float minHeight;
 
             // Calculate minimum top of all components on this band.
             foreach (ReportComponentBase component in Objects)
