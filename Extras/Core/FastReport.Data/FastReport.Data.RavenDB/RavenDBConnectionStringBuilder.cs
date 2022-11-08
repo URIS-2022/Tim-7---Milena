@@ -38,16 +38,14 @@ namespace FastReport.Data
         /// <summary>
         /// Gets or sets the password.
         /// </summary>
-        public string Password
         {
-            get { return password; }
-            set { password = value; }
+            public string Password { get; set; }
         }
 
-        /// <summary>
-        /// Gets or sets the database name.
-        /// </summary>
-        public string DatabaseName
+    /// <summary>
+    /// Gets or sets the database name.
+    /// </summary>
+    public string DatabaseName
         {
             get { return databaseName; }
             set { databaseName = value; }
