@@ -62,11 +62,7 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(false)]
         [Category("Behavior")]
-        public bool StartNewPage
-        {
-            get { return startNewPage; }
-            set { startNewPage = value; }
-        }
+        public bool StartNewPage { get; set; }
 
         /// <summary>
         /// Gets or sets a value that determines the number of repetitions of the same band.
