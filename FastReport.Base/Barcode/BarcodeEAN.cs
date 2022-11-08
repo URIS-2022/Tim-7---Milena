@@ -60,7 +60,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Initializes a new instance of the <see cref="BarcodeEAN"/> class with default settings.
     /// </summary>
-    public BarcodeEAN()
+    protected BarcodeEAN()
     {
       ratioMin = 2;
       ratioMax = 3;
