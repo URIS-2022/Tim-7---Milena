@@ -84,11 +84,8 @@ namespace FastReport
         /// </remarks>
         [DefaultValue(true)]
         [Category("Behavior")]
-        public bool FirstRowStartsNewPage
-        {
-            get { return firstRowStartsNewPage; }
-            set { firstRowStartsNewPage = value; }
-        }
+        public bool FirstRowStartsNewPage { get; set; }
+        
 
         /// <summary>
         /// Gets or sets a value indicating that the band should be printed on the page bottom.
