@@ -632,12 +632,15 @@ namespace FastReport
     {
       get { return blend; }
       set {
-            if (value < 0)
-            {
-                blend = 1;
-            }
-            blend = value > 1 ? 1 : value;
-
+                if (value < 0)
+                {
+                    blend = 0;
+                }
+                else if (value > 1)
+                {
+                    blend = 1;
+                }
+                blend = value;
           }
     }
     
