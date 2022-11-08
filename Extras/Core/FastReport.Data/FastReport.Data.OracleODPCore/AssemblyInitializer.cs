@@ -2,9 +2,9 @@ using FastReport.Utils;
 
 namespace FastReport.Data
 {
-    public class OracleODPCoreAssemblyInitializer : AssemblyInitializerBase
+    public class OracleOdpCoreAssemblyInitializer : AssemblyInitializerBase
   {
-    public OracleODPCoreAssemblyInitializer()
+    public OracleOdpCoreAssemblyInitializer()
     {
       RegisteredObjects.AddConnection(typeof(OracleDataConnection));
     }
