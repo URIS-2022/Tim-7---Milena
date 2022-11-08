@@ -428,12 +428,7 @@ namespace FastReport.Gauge.Radial
                     {
                         if (RadialUtils.IsSemicircle(Parent) || RadialUtils.IsQuadrant(Parent))
                         {
-                            if ((RadialUtils.IsTop(Parent) || RadialUtils.IsBottom(Parent)) && RadialUtils.IsSemicircle(Parent))
-                            {
-                                horAlign = HorAlign.Right;
-                                vertAlign = VertAlign.Middle;
-                            }
-                            else if (RadialUtils.IsLeft(Parent) && RadialUtils.IsTop(Parent))
+                            if ((RadialUtils.IsTop(Parent) || RadialUtils.IsBottom(Parent)) && RadialUtils.IsSemicircle(Parent) || RadialUtils.IsLeft(Parent) && RadialUtils.IsTop(Parent))
                             {
                                 horAlign = HorAlign.Right;
                                 vertAlign = VertAlign.Middle;
