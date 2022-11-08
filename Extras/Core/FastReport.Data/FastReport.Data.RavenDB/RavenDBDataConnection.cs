@@ -194,7 +194,7 @@ namespace FastReport.Data
 
                     // get all rows of the table
                     BlittableJsonReaderObject[] objects = session.Advanced.LoadStartingWith<BlittableJsonReaderObject>(name, null, 0, Int32.MaxValue);
-                    if (objects.Count() > 0)
+                    if objects.Any()
                     {
                         //create table columns
                         var properties = objects[0].GetPropertyNames();
