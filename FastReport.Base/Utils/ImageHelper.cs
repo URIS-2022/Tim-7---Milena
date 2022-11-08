@@ -91,7 +91,6 @@ namespace FastReport.Utils
                     {
                         g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                         g.DrawImage(metafile, 0, 0, (float)image.Width, (float)image.Height);
-                        g.Dispose();
                     }
                     bitmap.Save(stream, format);
                 }
