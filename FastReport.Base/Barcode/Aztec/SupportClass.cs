@@ -36,7 +36,7 @@ namespace FastReport.Barcode.Aztec
          int destinationCounter = destinationStart;
          while (sourceCounter < sourceEnd)
          {
-            destinationArray[destinationCounter] = (char)sourceString[sourceCounter];
+            destinationArray[destinationCounter] = sourceString[sourceCounter];
             sourceCounter++;
             destinationCounter++;
          }
