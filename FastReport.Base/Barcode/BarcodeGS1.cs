@@ -234,7 +234,7 @@ namespace FastReport.Barcode
             1, 3, 9, 1, 1
         };
 
-        private int[] ModulesOdd = { 12, 10, 8, 6, 4, 5, 7, 9, 11 };
+        private readonly int[] ModulesOdd = { 12, 10, 8, 6, 4, 5, 7, 9, 11 };
         private int[] ModulesEven = { 4, 6, 8, 10, 12, 10, 8, 6, 4 };
         private int[] WidthsOdd = { 8, 6, 4, 3, 1, 2, 4, 6, 8 };
         private int[] WidthsEven = { 1, 3, 5, 6, 8, 7, 5, 3, 1 };
