@@ -870,7 +870,6 @@ namespace FastReport
                 {
                     obj.Top -= breakLine;
                     obj.Parent = breakTo;
-                    continue;
                 }
             }
 
