@@ -1375,7 +1375,7 @@ namespace FastReport
         throw new InvalidOperationException("Objects of type System.ToChar() "
           + "cannot apply '&' operator.");
       if (tt == typeof(System.Boolean))
-        return new Variant(sv.ToBoolean() & (bool)value);
+        return new Variant(sv.ToBoolean() && (bool)value);
       object retobj = VariantArithmetic(MathAction.BitAnd, sv, value);
       if (retobj != null) return new Variant(retobj);
       throw new InvalidOperationException(
@@ -1439,7 +1439,7 @@ namespace FastReport
         throw new InvalidOperationException("Objects of type System.ToChar() "
           + "cannot apply '|' operator.");
       if (tt == typeof(System.Boolean))
-        return new Variant(sv.ToBoolean() | (bool)value);
+        return new Variant(sv.ToBoolean() || (bool)value);
       object retobj = VariantArithmetic(MathAction.BitOr, sv, value);
       if (retobj != null) return new Variant(retobj);
       throw new InvalidOperationException(

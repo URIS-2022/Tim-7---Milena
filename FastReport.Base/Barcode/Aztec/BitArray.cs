@@ -419,13 +419,13 @@ namespace FastReport.Barcode.Aztec
       /// <summary>
       /// Determines whether the specified <see cref="System.Object"/> is equal to this instance.
       /// </summary>
-      /// <param name="o">The <see cref="System.Object"/> to compare with this instance.</param>
+      /// <param name="obj">The <see cref="System.Object"/> to compare with this instance.</param>
       /// <returns>
       ///   <c>true</c> if the specified <see cref="System.Object"/> is equal to this instance; otherwise, <c>false</c>.
       /// </returns>
-      public override bool Equals(Object o)
+      public override bool Equals(Object obj)
       {
-         BitArray other = o as BitArray;
+         BitArray other = obj as BitArray;
          if (other == null)
             return false;
          if (size != other.size)

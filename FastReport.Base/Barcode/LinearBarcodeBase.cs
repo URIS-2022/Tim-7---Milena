@@ -116,14 +116,7 @@ namespace FastReport.Barcode
         #endregion
 
         #region Private Methods
-        private void CheckText(string text)
-        {
-            foreach (char i in text)
-            {
-                if (i < '0' || i > '9')
-                    throw new Exception(Res.Get("Messages,InvalidBarcode2"));
-            }
-        }
+        
 
         private void MakeModules()
         {

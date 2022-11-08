@@ -7,7 +7,7 @@
 /*global document: false, jQuery: false */
 
 (function ($) {
-    var $jQval = $.validator,
+    const $jQval = $.validator,
         adapters,
         data_validation = "unobtrusiveValidation";
 
@@ -39,7 +39,7 @@
     }
 
     function onError(error, inputElement) {  // 'this' is the form element
-        var container = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
+        const container = $(this).find("[data-valmsg-for='" + escapeAttributeValue(inputElement[0].name) + "']"),
             replaceAttrValue = container.attr("data-valmsg-replace"),
             replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) !== false : null;
 
@@ -337,7 +337,7 @@
     });
 
     $jQval.addMethod("nonalphamin", function (value, element, nonalphamin) {
-        var match;
+        const match;
         if (nonalphamin) {
             match = value.match(/\W/g);
             match = match && match.length >= nonalphamin;

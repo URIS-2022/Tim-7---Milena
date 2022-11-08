@@ -9,6 +9,9 @@ namespace FastReport.Utils
     [Serializable]
     public class DuplicateNameException : Exception
     {
+        /// <summary>
+        /// Added protected constructor with 2 parameters to conform ISerializable pattern
+        /// </summary>
         protected DuplicateNameException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
 

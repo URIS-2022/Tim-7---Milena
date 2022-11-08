@@ -287,7 +287,7 @@ namespace FastReport.Data.JsonConnection
                     {
                         JsonTableDataSource jsonTableDataSource = table as JsonTableDataSource;
                         simpleArray = jsonTableDataSource.SimpleStructure =
-                            simpleStructure & items.Type == "object";
+                            simpleStructure && items.Type == "object";
                     }
 
                     if (simpleArray)

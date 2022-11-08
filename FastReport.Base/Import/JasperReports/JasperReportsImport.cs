@@ -620,7 +620,8 @@ namespace FastReport.Import.JasperReports
                         {
                             Report report = new Report();
                             JasperReportsImport reportsImport = new JasperReportsImport();
-                            var path = FolderPath + "\\" + (xmlObject["subreportExpression"].InnerText).Replace(".jasper", ".jrxml").Replace("\"", "");
+                            char separator = Path.DirectorySeparatorChar;
+                            var path = FolderPath + separator + separator + (xmlObject["subreportExpression"].InnerText).Replace(".jasper", ".jrxml").Replace("\"", "");
                             reportsImport.LoadReport(report, path);
                             foreach (PageBase page in report.Pages)
                             {

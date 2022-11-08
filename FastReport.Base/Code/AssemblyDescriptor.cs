@@ -359,11 +359,11 @@ namespace FastReport.Code
             List<FunctionInfo> list = new List<FunctionInfo>();
             RegisteredObjects.Functions.EnumItems(list);
 
-            foreach (FunctionInfo info in list)
+            foreach (MethodInfo infoFunction in list.Select(x=>x.Function))
             {
-                if (info.Function != null)
+                if (infoFunction != null)
                 {
-                    InsertItem(Report.CodeHelper.GetMethodSignatureAndBody(info.Function), "Function");
+                    InsertItem(Report.CodeHelper.GetMethodSignatureAndBody(infoFunction), "Function");
                 }
             }
         }

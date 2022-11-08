@@ -60,7 +60,7 @@ namespace FastReport.Barcode
                     bool b = matrix.getRow(y, null)[x];
 
                     Brush brush = /*b == true ?*/ dark /*: light*/;
-                    if (b == true)
+                    if (b)
                         g.FillRectangle(brush, x * PIXEL_SIZE * kx, y * PIXEL_SIZE * ky,
                                                PIXEL_SIZE * kx,     PIXEL_SIZE * ky);
                 }

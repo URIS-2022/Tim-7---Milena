@@ -522,7 +522,10 @@ namespace FastReport.Import.StimulSoft
                     {   
                         result = result.Replace(result.Substring(i, 7), ((char)Int16.Parse(result.Substring(i + 2, 4), NumberStyles.AllowHexSpecifier)).ToString());
                     }
-                    catch { }
+                    catch {
+                    //it's never good idea to left empty catch block, instead give explanations!
+                    
+                    }
             }
 
             return result;

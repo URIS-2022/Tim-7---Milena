@@ -222,8 +222,8 @@ namespace FastReport.CrossView
               {
                 crossViewHeaderDescriptor = new CrossViewHeaderDescriptor("", "", false, true, false);
               }
-              else
-              if (i == (MeasuresLevel + 1))
+              else if (i == (MeasuresLevel + 1))
+                                
               {
                 crossViewHeaderDescriptor = new CrossViewHeaderDescriptor(CubeSource.GetXAxisFieldName(i - 2), "", true, false, false);
               }
