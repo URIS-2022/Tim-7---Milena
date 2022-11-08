@@ -614,7 +614,7 @@ namespace FastReport.Code
                         text.CanGrow = true;
                         text.FillColor = Color.Red;
                         text.Text = "DIVISION BY ZERO!";
-                        continue;
+                        
                     }
                     else
                     {
