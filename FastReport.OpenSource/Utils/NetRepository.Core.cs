@@ -111,8 +111,6 @@ namespace Editor.Syntax.Parsers.ReflectionRepository
                     string name = GetNodeName(node);
                     if (name.IndexOf(".Clear") >= 0)
                         descriptions[name] = GetNodeSummary(node);
-                    else
-                        descriptions[name] = GetNodeSummary(node);
                     if (node.HasChildNodes)
                         LoadParameters(name, node, descriptions);
                     node = node.NextSibling;
