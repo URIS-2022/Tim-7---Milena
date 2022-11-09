@@ -13,7 +13,7 @@ namespace FastReport.Barcode.QRCode
 
         protected QRData() { }
 
-        public QRData(string data)
+        protected QRData(string data)
         {
             Unpack(data);
         }
