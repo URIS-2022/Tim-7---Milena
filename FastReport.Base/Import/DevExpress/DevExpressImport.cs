@@ -884,7 +884,7 @@ namespace FastReport.Import.DevExpress
                     // First header level may or may not contain a property "level", but the second level must contain a property with a value of 1
                     headerName = subBands.Where(x => (GetLevelPropValue(GetObjectDescription(x)) == curLevel || GetLevelPropValue(GetObjectDescription(x)) == -1) && GetBandType(x).Equals(GROUP_HEADER_BAND_MASK)).FirstOrDefault();
                 else
-                    headerName = subBands.Where(x => GetLevelPropValue(GetObjectDescription(x)) == curLevel && GetBandType(x).Equals(GROUP_HEADER_BAND_MASK)).FirstOrDefault();
+                    headerName = subBands.FirstOrDefault(x => GetLevelPropValue(GetObjectDescription(x)) == curLevel && GetBandType(x).Equals(GROUP_HEADER_BAND_MASK));
 
                 // Try to create header
                 GroupHeaderBand groupHeader = LoadDetailReportGroupHeaderBand(data, headerName);
