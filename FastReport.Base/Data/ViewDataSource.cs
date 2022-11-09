@@ -62,7 +62,7 @@ namespace FastReport.Data
             return null;
 
         if (column.Tag == null)
-        column.Tag = View.Table.Columns.IndexOf(column.Name);
+            column.Tag = View.Table.Columns.IndexOf(column.Name);
 
       return CurrentRow == null ? null : ((DataRowView)CurrentRow)[(int)column.Tag];
     }

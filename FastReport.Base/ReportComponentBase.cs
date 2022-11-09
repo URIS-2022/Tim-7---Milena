@@ -478,11 +478,8 @@ namespace FastReport
         /// Gets or sets a script event name that will be fired when the user click the object in the preview window.
         /// </summary>
         [Category("Preview")]
-        public string ClickEvent
-        {
-            get { return clickEvent; }
-            set { clickEvent = value; }
-        }
+        public string ClickEvent { get; set; }
+        
 
         /// <summary>
         /// Determines if the object has custom border and use only <b>Border.Width</b>, <b>Border.Style</b> and 

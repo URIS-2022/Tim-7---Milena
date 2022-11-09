@@ -625,7 +625,7 @@ namespace FastReport.Import.DevExpress
             int level = 0;
             for(int i = 0; i < detailReports.Count; i++)
             {
-                XmlNode detail = detailReports.Where(x => GetAttribute(x, "Level") == level.ToString()).FirstOrDefault();
+                XmlNode detail = detailReports.FirstOrDefault(x => GetAttribute(x, "Level") == level.ToString());
                 LoadDetailReport(detail);
                 level++;
             }
