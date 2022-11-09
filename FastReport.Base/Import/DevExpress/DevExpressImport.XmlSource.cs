@@ -123,13 +123,11 @@ namespace FastReport.Import.DevExpress
                         component.Border = style.Border;
                     }
 
-                    if (stylePriority == null || !AttributeExist(stylePriority, "UseForeColor"))
-                    {
-                        if (component is TextObject)
+                    if ((stylePriority == null || !AttributeExist(stylePriority, "UseForeColor")) && component is TextObject)                                            
                         {
                             (component as TextObject).TextColor = (style.TextFill as SolidFill).Color;
                         }
-                    }
+                    
                 }
             }
 
