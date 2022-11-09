@@ -835,7 +835,7 @@ namespace FastReport.Data
       }
     }
 
-    private class Indices : IComparable
+    private sealed class Indices : IComparable
     {
       private object[] values;
 
