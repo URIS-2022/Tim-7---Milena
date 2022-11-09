@@ -241,7 +241,7 @@ namespace FastReport.Export.Html
             return "<img src=\"" + file + "\" alt=\"\"/>";
         }
 
-        private string HTMLGetImage(int PageNumber, int CurrentPage, int ImageNumber, string hash, bool Base,
+        private string HTMLGetImage(int CurrentPage, int ImageNumber, string hash, bool Base,
             System.Drawing.Image Metafile, MemoryStream PictureStream, bool isSvg)
         {
             if (pictures)

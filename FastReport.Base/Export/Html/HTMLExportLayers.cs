@@ -620,7 +620,7 @@ namespace FastReport.Export.Html
                     }
                     else
                         hash = Crypter.ComputeHash(PictureStream);
-                    result = HTMLGetImage(0, 0, 0, hash, true, null, PictureStream, false);
+                    result = HTMLGetImage(0, 0, hash, true, null, PictureStream, false);
                 }
             }
             return result;
