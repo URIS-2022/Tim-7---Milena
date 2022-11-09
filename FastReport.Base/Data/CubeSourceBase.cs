@@ -167,7 +167,7 @@ namespace FastReport.Data
     /// <summary>
     /// Initializes a new instance of the <see cref="CubeSourceBase"/> class with default settings.
     /// </summary>
-    public CubeSourceBase()
+    protected CubeSourceBase()
     {
       SetFlags(Flags.HasGlobalName, true);
     }

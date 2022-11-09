@@ -47,7 +47,6 @@ namespace FastReport
 
             // json
             RegisteredObjects.InternalAdd(typeof(Data.JsonConnection.JsonTableDataSource), "", 0);
-            //RegisteredObjects.Add(typeof(Data.JsonConnection.JsonObjectDataSource), "", 0);
             //RegisteredObjects.Add(typeof(Data.JsonConnection.JsonArrayDataSource), "", 0);
             RegisteredObjects.InternalAddConnection(typeof(Data.JsonConnection.JsonDataSourceConnection));
             // formats

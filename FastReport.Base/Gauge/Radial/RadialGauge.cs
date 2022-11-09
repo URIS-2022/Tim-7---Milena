@@ -184,7 +184,7 @@ namespace FastReport.Gauge.Radial
                     value == RadialGaugePosition.Left ||
                     value == RadialGaugePosition.Right ||
                     value == RadialGaugePosition.Top))
-                position = value;
+                    position = value;
                 else if (Type == RadialGaugeType.Quadrant &&
                     (
                     ((value & RadialGaugePosition.Left) != 0 && (value & RadialGaugePosition.Top) != 0 &&

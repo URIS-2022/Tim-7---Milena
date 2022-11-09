@@ -235,9 +235,9 @@ namespace FastReport.Barcode
         };
 
         private readonly int[] ModulesOdd = { 12, 10, 8, 6, 4, 5, 7, 9, 11 };
-        private int[] ModulesEven = { 4, 6, 8, 10, 12, 10, 8, 6, 4 };
+        private readonly int[] ModulesEven = { 4, 6, 8, 10, 12, 10, 8, 6, 4 };
         private int[] WidthsOdd = { 8, 6, 4, 3, 1, 2, 4, 6, 8 };
-        private int[] WidthsEven = { 1, 3, 5, 6, 8, 7, 5, 3, 1 };
+        private readonly int[] WidthsEven = { 1, 3, 5, 6, 8, 7, 5, 3, 1 };
         private int[] GSums = { 0, 161, 961, 2015, 2715, 0, 336, 1036, 1516 };
         private int[] TList = { 1, 10, 34, 70, 126, 4, 20, 48, 81 };
 

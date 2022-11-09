@@ -330,7 +330,7 @@ namespace FastReport.Import.JasperReports
                     barcode.Barcode = new Barcode2of5Interleaved();
                     break;
                 case "std2of5":
-                    barcode.Barcode = new Barcode2of5Industrial();
+                    barcode.Barcode = new Barcode2Of5Industrial();
                     break;
                 case "postnet":
                     barcode.Barcode = new BarcodePostNet();

@@ -263,13 +263,13 @@ namespace FastReport.Barcode
                 if (text.Length == 13)
                     text = CheckSumModulo10(text);
                 else if (text.Length != 14)
-                    throw new Exception(Res.Get("Messages,BarcodeLengthMismatch"));
+                    throw new ArgumentNullException(Res.Get("Messages,BarcodeLengthMismatch"));
 
             }
             else
             {
                 if (text.Length != 14)
-                    throw new Exception(Res.Get("Messages,BarcodeLengthMismatch"));
+                    throw new ArgumentNullException(Res.Get("Messages,BarcodeLengthMismatch"));
             }
 
             for (int i = 0; i < (text.Length / 2); i++)
@@ -462,7 +462,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Generates the "2/5 Industrial" barcode.
     /// </summary>
-    public class Barcode2of5Industrial : Barcode2of5Interleaved
+    public class Barcode2Of5Industrial : Barcode2of5Interleaved
     {
         internal override string GetPattern()
         {

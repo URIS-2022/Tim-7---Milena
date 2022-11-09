@@ -208,7 +208,7 @@ namespace FastReport.Import.DevExpress
         private void LoadBand(BandBase band, string description)
         {
             if(ExistValue("HeightF", description))
-            band.Height = UnitsConverter.SizeFToPixels(GetPropertyValue("HeightF", description));
+                band.Height = UnitsConverter.SizeFToPixels(GetPropertyValue("HeightF", description));
             else
                 band.Height = UnitsConverter.SizeFToPixels("100F");
             band.FillColor = UnitsConverter.ConvertBackColor(GetPropertyValue("BackColor", description));
