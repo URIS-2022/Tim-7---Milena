@@ -267,7 +267,7 @@ namespace FastReport.Utils
         public MethodInfo Function
         {
             get { return null; }
-            set { }
+            set { count = value; }
         }
 
         /// <summary>
