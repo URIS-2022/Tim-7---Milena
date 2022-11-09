@@ -768,7 +768,6 @@ namespace FastReport.Barcode
       int[] e1 = new int[6];
       if (dataSize < 0)
         return -1;
-      e = -1;
 
       if (encoding == DatamatrixEncoding.Auto)
       {
