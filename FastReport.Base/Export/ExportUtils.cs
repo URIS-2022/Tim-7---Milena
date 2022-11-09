@@ -245,7 +245,8 @@ namespace FastReport.Export
             }
             else if (format is PercentFormat)
             {
-                string pattern = "0";
+                StringBuilder pattern = new StringBuilder();
+                pattern = pattern.Append("0");
 
                 if (useLocale)
                 {
@@ -255,11 +256,11 @@ namespace FastReport.Export
 
                 if ((format as PercentFormat).DecimalDigits > 0)
                 {
-                    pattern += ".";
+                    pattern.Append(".");
                     for (int i = 0; i < (format as PercentFormat).DecimalDigits; i++)
-                        pattern += "0";
+                        pattern.Append("0");
                 }                  
-                return pattern + "%";
+                return pattern.ToString() + "%";
             }
 
             return "";
