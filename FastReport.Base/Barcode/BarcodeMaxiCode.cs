@@ -313,7 +313,6 @@ namespace FastReport.Barcode
         }
 
         private int eciMode = 3;
-        private byte[] inputBytes;
         //string error_msg;
         public List<Hexagon> hexagons = new List<Hexagon>();
         public List<Ellipse> target = new List<Ellipse>();
@@ -521,7 +520,8 @@ namespace FastReport.Barcode
         //@Override
         public bool encode()
         {
-            inputBytes = Encoding.UTF8.GetBytes(text);
+
+            byte[]  inputBytes = Encoding.UTF8.GetBytes(text);
 
             // copy input data over into source
             int sourcelen = text.Length;
