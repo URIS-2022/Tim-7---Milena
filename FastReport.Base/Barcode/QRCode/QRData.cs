@@ -772,7 +772,7 @@ namespace FastReport.Barcode.QRCode
             }
             string[] datas = datass.Split('\r');
 
-            List<string> vs = new List<string>();
+           
 
             int counter = 3;
 
