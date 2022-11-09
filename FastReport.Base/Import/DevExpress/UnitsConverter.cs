@@ -364,7 +364,7 @@ namespace FastReport.Import.DevExpress
             }
             else if (symbology.Contains("industrial2of5"))
             {
-                barcode.Barcode = new Barcode2of5Industrial();
+                barcode.Barcode = new Barcode2Of5Industrial();
             }
             else if (symbology.Contains("interleaved2of5"))
             {
