@@ -578,7 +578,7 @@ namespace FastReport.Barcode
             return result;
         }
 
-        int[] readonly ChecksumWeight =
+        int[] ChecksumWeight =
             {
                 1, 3, 9, 27, 81, 65, 17, 51, 64, 14, 42, 37, 22, 66,
                 20, 60, 2, 6, 18, 54, 73, 41, 34, 13, 39, 28, 84, 74

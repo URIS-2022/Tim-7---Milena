@@ -285,19 +285,20 @@ namespace FastReport.Barcode
     /// Gets or sets the symbol size.
     /// </summary>
     [DefaultValue(DatamatrixSymbolSize.Auto)]
+
     
-    {
+    
       public DatamatrixSymbolSize SymbolSize { get; set; }
-    }
+    
     
     /// <summary>
     /// Gets or sets the encoding mode.
     /// </summary>
     [DefaultValue(DatamatrixEncoding.Auto)]
     
-    {
+    
       public DatamatrixEncoding Encoding { get; set; }
-}
+    
 
     /// <summary>
     /// Gets or sets the code page used for text conversion.
