@@ -182,7 +182,7 @@ namespace FastReport
      if (tt == typeof(System.DateTimeOffset))
         return this.ToDateTimeOffset();   
 
-     switch (Type.GetTypeCode(tt.GetType()))
+     switch (Type.GetTypeCode(tt))
             {
                 case TypeCode.Boolean:
                     return this.ToBoolean();
