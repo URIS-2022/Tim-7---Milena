@@ -176,41 +176,48 @@ namespace FastReport
     }
     private object TypeMap(Type type) {
       Type tt = type;
-      if (tt == typeof(System.Boolean))
-        return this.ToBoolean();
-      if (tt == typeof(System.String))
-        return this.ToString();
-      if (tt == typeof(System.Char))
-        return this.ToChar();
-      if (tt == typeof(System.Byte))
-        return this.ToByte();
-      if (tt == typeof(System.Int16))
-        return this.ToInt16();
-      if (tt == typeof(System.Int32))
-        return this.ToInt32();
-      if (tt == typeof(System.Int64))
-        return this.ToInt64();
-      if (tt == typeof(System.SByte))
-        return this.ToSByte();
-      if (tt == typeof(System.UInt16))
-        return this.ToUInt16();
-      if (tt == typeof(System.UInt32))
-        return this.ToUInt32();
-      if (tt == typeof(System.UInt64))
-        return this.ToUInt64();
-      if (tt == typeof(System.Single))
-        return this.ToSingle();
-      if (tt == typeof(System.Double))
-        return this.ToDouble();
-      if (tt == typeof(System.Decimal))
-        return this.ToDecimal();
-      if (tt == typeof(System.DateTime))
-        return this.ToDateTime();
-      if (tt == typeof(System.TimeSpan))
+
+     if (tt == typeof(System.TimeSpan))
         return this.ToTimeSpan();
-      if (tt == typeof(System.DateTimeOffset))
-        return this.ToDateTimeOffset();
-      return ToType(type, true);
+     if (tt == typeof(System.DateTimeOffset))
+        return this.ToDateTimeOffset();   
+
+     switch (Type.GetTypeCode(tt.GetType()))
+            {
+                case TypeCode.Boolean:
+                    return this.ToBoolean();
+                case TypeCode.String:
+                    return this.ToString();
+                case TypeCode.Char:
+                    return this.ToChar();
+                case TypeCode.Byte:
+                    return this.ToByte();
+                case TypeCode.Int16:
+                    return this.ToInt16();
+                case TypeCode.Int32:
+                    return this.ToUInt32();
+                case TypeCode.Int64:
+                    return this.ToInt64();
+                case TypeCode.SByte:
+                    return this.ToSByte();
+                case TypeCode.UInt16:
+                    return this.ToUInt16();
+                case TypeCode.UInt32:
+                    return this.ToUInt32();
+                case TypeCode.UInt64:
+                    return this.ToUInt64();
+                case TypeCode.Single:
+                    return this.ToSingle();
+                case TypeCode.Double:
+                    return this.ToDouble();
+                case TypeCode.Decimal:
+                    return this.ToDecimal();
+                case TypeCode.DateTime:
+                    return this.ToDateTime();
+                default:
+                    return ToType(type, true);
+            }
+
     }
     /// <summary>
     /// Returns true if the <see cref="Value"/> property implements <see cref="IConvertible"/>
