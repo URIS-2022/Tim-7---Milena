@@ -269,7 +269,7 @@ namespace FastReport.Barcode
             else
             {
                 if (text.Length != 14)
-                    throw new Exception(Res.Get("Messages,BarcodeLengthMismatch"));
+                    throw new ArgumentNullException(Res.Get("Messages,BarcodeLengthMismatch"));
             }
 
             for (int i = 0; i < (text.Length / 2); i++)
