@@ -175,12 +175,9 @@ namespace FastReport.Export.Html
         {
             if (rtl)
                 sb.Append("direction:rtl;");
-        }
+        }      
 
-        private string HTMLGetStylesHeader()
-        {
-            return "<style type=\"text/css\"><!-- ";
-        }
+        const string HTMLStylesHeader = "<style type=\"text/css\"><!-- ";
 
         private void PrintPageStyle(FastString sb)
         {

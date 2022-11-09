@@ -98,7 +98,7 @@ namespace FastReport.Export.Html
             PrintPageStyle(styles);
             if (prevStyleListIndex < cssStyles.Count)
             {
-                styles.AppendLine(HTMLGetStylesHeader());
+                styles.AppendLine(HTMLStylesHeader);
                 for (int i = prevStyleListIndex; i < cssStyles.Count; i++)
                     styles.Append(HTMLGetStyleHeader(i, PageNumber)).Append(cssStyles[i]).AppendLine("}");
                 styles.AppendLine(HTMLGetStylesFooter());
