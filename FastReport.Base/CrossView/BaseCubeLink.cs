@@ -48,7 +48,7 @@ namespace FastReport.CrossView
         /// 
         /// </summary>
         public string Text;
-        //    public PropertyOfCellAxis CellProperties;
+        
         //    public int TotalIndex;
         //    public int NodeLevel;
         //    public int NodeIndex;
