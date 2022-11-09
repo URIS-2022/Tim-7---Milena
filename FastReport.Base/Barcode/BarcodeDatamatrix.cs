@@ -294,11 +294,10 @@ namespace FastReport.Barcode
     /// Gets or sets the encoding mode.
     /// </summary>
     [DefaultValue(DatamatrixEncoding.Auto)]
-    public DatamatrixEncoding Encoding
+    
     {
-      get { return encoding; }
-      set { encoding = value; }
-    }
+      public DatamatrixEncoding Encoding { get; set; }
+}
 
     /// <summary>
     /// Gets or sets the code page used for text conversion.
