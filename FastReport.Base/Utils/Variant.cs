@@ -399,7 +399,7 @@ namespace FastReport
         if ((bool)_value)
           return (int)1;
         else
-          return (int)0;
+          return 0;
       if (tt == typeof(System.DateTime))
         return (int)((DateTime)_value).Ticks;
       if (tt == typeof(System.TimeSpan))
