@@ -261,11 +261,11 @@ namespace FastReport.Code
                 expr = expr.Substring(1, expr.Length - 2);
 
             // skip simple items. Report.Calc does this.
-            if (!forceSimpleItems)
-            {
-                if (DataHelper.IsSimpleColumn(Report.Dictionary, expr) ||
+            if (!forceSimpleItems && DataHelper.IsSimpleColumn(Report.Dictionary, expr) ||
                   DataHelper.IsValidParameter(Report.Dictionary, expr) ||
                   DataHelper.IsValidTotal(Report.Dictionary, expr))
+            {
+                
                     return;
             }
 
