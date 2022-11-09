@@ -11,7 +11,7 @@ namespace FastReport.Barcode.QRCode
     {
         public string data;
 
-        public QRData() { }
+        protected QRData() { }
 
         public QRData(string data)
         {
