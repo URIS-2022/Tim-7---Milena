@@ -285,10 +285,9 @@ namespace FastReport.Barcode
     /// Gets or sets the symbol size.
     /// </summary>
     [DefaultValue(DatamatrixSymbolSize.Auto)]
-    public DatamatrixSymbolSize SymbolSize
+    
     {
-      get { return symbolSize; }
-      set { symbolSize = value; }
+      public DatamatrixSymbolSize SymbolSize { get; set; }
     }
     
     /// <summary>
