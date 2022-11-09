@@ -263,7 +263,7 @@ namespace FastReport.Barcode
                 if (text.Length == 13)
                     text = CheckSumModulo10(text);
                 else if (text.Length != 14)
-                    throw new Exception(Res.Get("Messages,BarcodeLengthMismatch"));
+                    throw new ArgumentNullException(Res.Get("Messages,BarcodeLengthMismatch"));
 
             }
             else
