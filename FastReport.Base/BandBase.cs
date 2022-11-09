@@ -103,11 +103,8 @@ namespace FastReport
         /// </summary>
         [DefaultValue(false)]
         [Category("Behavior")]
-        public bool KeepChild
-        {
-            get { return keepChild; }
-            set { keepChild = value; }
-        }
+        public bool KeepChild { get; set; }
+        
 
         /// <summary>
         /// Gets or sets an outline expression.
