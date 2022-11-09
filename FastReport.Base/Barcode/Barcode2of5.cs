@@ -462,7 +462,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Generates the "2/5 Industrial" barcode.
     /// </summary>
-    public class Barcode2of5Industrial : Barcode2of5Interleaved
+    public class Barcode2Of5Industrial : Barcode2of5Interleaved
     {
         internal override string GetPattern()
         {
