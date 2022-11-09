@@ -594,17 +594,17 @@ namespace FastReport.Code
                 {
                     string errObjName = GetErrorObjectName(ce.Line);
 
-                    if (Config.CompilerSettings.ExceptionBehaviour != CompilerExceptionBehaviour.Default)
+                    if (Config.CompilerSettings.ExceptionBehaviour != CompilerExceptionBehaviour.Default && ce.ErrorNumber == "CS0103")
                     {
                         // handle errors when name does not exist in the current context
-                        if (ce.ErrorNumber == "CS0103")
-                        {
+                        
+                        
                             TextObjectBase text = Report.FindObject(errObjName) as TextObjectBase;
                             text.Text = ReplaceExpression(ce.ErrorText, text);
                             if (Config.CompilerSettings.ExceptionBehaviour == CompilerExceptionBehaviour.ShowExceptionMessage)
                                 System.Windows.Forms.MessageBox.Show(ce.ErrorText);
                             continue;
-                        }
+                        
                     }
 
                     // handle division by zero errors
