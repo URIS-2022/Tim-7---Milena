@@ -262,7 +262,7 @@ namespace FastReport.Barcode
                 for (short i = 1; i <= l; i++)
                 {
                     int divident = int.Parse(copy.Substring(0, i), CultureInfo.InvariantCulture);
-                    while (divident < divider & i < l - 1)
+                    while (divident < divider && i < l - 1)
                     {
                         r = r + "0";
                         i += 1;
