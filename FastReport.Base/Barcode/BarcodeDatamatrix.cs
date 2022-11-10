@@ -835,20 +835,6 @@ namespace FastReport.Barcode
       return -1;
     }
 
-    private static int GetNumber(byte[] text, int ptrIn, int n)
-    {
-      int v, j, c;
-      v = 0;
-      for (j = 0; j < n; ++j)
-      {
-        c = text[ptrIn++] & 0xff;
-        if (c < '0' || c > '9')
-          return -1;
-        v = v * 10 + c - '0';
-      }
-      return v;
-    }
-
     private string ReplaceControlCodes(string text)
     {
             if(AutoEncode)
