@@ -703,7 +703,7 @@ namespace FastReport.Barcode.QRCode
         private string alternativeProcedure1, alternativeProcedure2;
         private Iban iban;
         private decimal? amount;
-        private Contact creditor, ultimateCreditor, debitor;
+        private Contact creditor, debitor;
         private Currency currency;
         private Reference reference;
         private AdditionalInformation additionalInformation;
@@ -797,7 +797,7 @@ namespace FastReport.Barcode.QRCode
                 {
                     infoString += datas[i] + '\r';
                 }
-                this.ultimateCreditor = new Contact(infoString);
+                
             }
             counter += 7;
             this.amount = datas[counter] == String.Empty ? amount = null : Decimal.Parse(datas[counter].Replace('.', ','));
