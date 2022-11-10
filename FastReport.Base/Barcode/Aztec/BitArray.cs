@@ -246,7 +246,7 @@ namespace FastReport.Barcode.Aztec
       {
          if (end < start)
          {
-            throw new System.ArgumentException();
+            throw new System.ArgumentException("Argument exception");
          }
          if (end == start)
          {
