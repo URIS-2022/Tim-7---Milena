@@ -638,7 +638,7 @@ namespace FastReport.CrossView
 
         public void AddData()
         {
-            //this method should be implemented
+            throw new NotSupportedException();
         }
 
         public void FinishPrint()
