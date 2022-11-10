@@ -24,18 +24,18 @@ namespace FastReport.Barcode
       {"E", "o", "o", "E", "o", "E" }     // 9
     };
 
-    internal override void DrawText(IGraphics g, string barData)
+    internal override void DrawText(IGraphics g, string data)
     {
       DrawString(g, -8, -2, "0", true);
       
       // parts of pattern: 3 + 24 + 6
       float x1 = GetWidth(pattern.Substring(0, 3));
       float x2 = GetWidth(pattern.Substring(0, 3 + 24));
-      DrawString(g, x1, x2, barData.Substring(0, 6));
+      DrawString(g, x1, x2, data.Substring(0, 6));
 
       x1 = GetWidth(pattern) + 1;
       x2 = x1 + 7;
-      DrawString(g, x1, x2, barData.Substring(6, 1), true);
+      DrawString(g, x1, x2, data.Substring(6, 1), true);
     }
 
     internal override string GetPattern()
@@ -106,22 +106,22 @@ namespace FastReport.Barcode
   /// </summary>
   public class BarcodeUPC_A : BarcodeUPC_E0
   {
-    internal override void DrawText(IGraphics g, string barData)
+    internal override void DrawText(IGraphics g, string data)
     {
-      DrawString(g, -8, -2, barData.Substring(0, 1), true);
+      DrawString(g, -8, -2, data.Substring(0, 1), true);
 
       // parts of pattern: 7 + 20 + 5 + 20 + 7
       float x1 = GetWidth(pattern.Substring(0, 7));
       float x2 = GetWidth(pattern.Substring(0, 7 + 20));
-      DrawString(g, x1, x2, barData.Substring(1, 5));
+      DrawString(g, x1, x2, data.Substring(1, 5));
 
       x1 = GetWidth(pattern.Substring(0, 7 + 20 + 5));
       x2 = GetWidth(pattern.Substring(0, 7 + 20 + 5 + 20));
-      DrawString(g, x1, x2, barData.Substring(6, 5));
+      DrawString(g, x1, x2, data.Substring(6, 5));
 
       x1 = GetWidth(pattern) + 1;
       x2 = x1 + 7;
-      DrawString(g, x1, x2, barData.Substring(11, 1), true);
+      DrawString(g, x1, x2, data.Substring(11, 1), true);
     }
 
     internal override string GetPattern()
@@ -171,9 +171,9 @@ namespace FastReport.Barcode
       return tmp + sum.ToString();
     }
 
-    internal override void DrawText(IGraphics g, string barData)
+    internal override void DrawText(IGraphics g, string data)
     {
-      DrawString(g, 0, drawArea.Width, barData);
+      DrawString(g, 0, drawArea.Width, data);
     }
 
     internal override string GetPattern()
