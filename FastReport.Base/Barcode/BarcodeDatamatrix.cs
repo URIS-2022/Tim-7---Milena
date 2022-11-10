@@ -874,7 +874,7 @@ namespace FastReport.Barcode
         e = GetEncodation(text, textOffset, textSize, data, extCount, last.dataSize, false);
         if (e < 0)
         {
-          throw new Exception("The text is too big.");
+          throw new ArgumentNullException("The text is too big.");
         }
         e += extCount;
         for (k = 0; k < dmSizes.Length; ++k)
