@@ -105,7 +105,6 @@ namespace FastReport
       if (Count > 1)
       {
         writer.WriteFloat("Columns.Width", Width);
-        Positions = Positions; // avoid bug when number of positions is not equal number of columns
         writer.WriteValue("Columns.Positions", Positions);
       }  
     }
