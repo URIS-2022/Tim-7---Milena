@@ -114,7 +114,7 @@ namespace FastReport.Export.Html
         }
 
         private void Layer(FastString Page, ReportComponentBase obj,
-            HTMLBorders border, FastString Text, string style, FastString addstyletag)
+            HtmlBorders border, FastString Text, string style, FastString addstyletag)
         {
             if (Page != null && obj != null)
             {
@@ -664,7 +664,7 @@ namespace FastReport.Export.Html
                 float x = Width > 0 ? obj.AbsLeft : (obj.AbsLeft + Width);
                 float y = Height > 0 ? hPos + obj.AbsTop : (hPos + obj.AbsTop + Height);
 
-                HTMLBorders border = new HTMLBorders(x, y, Width, Height);
+                HtmlBorders border = new HtmlBorders(x, y, Width, Height);
 
                 Layer(Page, obj, border, text, style, null);
             }
@@ -682,7 +682,7 @@ namespace FastReport.Export.Html
             float x = obj.Width > 0 ? obj.AbsLeft : (obj.AbsLeft + obj.Width);
             float y = obj.Height > 0 ? hPos + obj.AbsTop : (hPos + obj.AbsTop + obj.Height);
 
-            HTMLBorders borders = new HTMLBorders(x, y, obj.Width, obj.Height);
+            HtmlBorders borders = new HtmlBorders(x, y, obj.Width, obj.Height);
             Layer(Page, obj, borders, text, null, addstyle);
         }
 
@@ -712,7 +712,7 @@ namespace FastReport.Export.Html
             {
                 if (obj.Fill is SolidFill)
                 {
-                    HTMLBorders borders = new HTMLBorders(obj.AbsLeft, hPos + obj.AbsTop, obj.Width, obj.Height);
+                    HtmlBorders borders = new HtmlBorders(obj.AbsLeft, hPos + obj.AbsTop, obj.Width, obj.Height);
                     Layer(Page, obj, borders, text, GetStyleTag(UpdateCSSTable(obj)), null);
                 }
                 else

@@ -7,7 +7,7 @@ namespace FastReport.Export.Html
     /// <summary>
     /// Class with fields required for border
     /// </summary>
-    public class HTMLBorders
+    public class HtmlBorders
     {
         /// <summary>
         /// Left border
@@ -29,7 +29,7 @@ namespace FastReport.Export.Html
         /// <summary>
         /// Constructor that takes 4 arg
         /// </summary>
-        public HTMLBorders(float left, float top, float width, float height)
+        public HtmlBorders(float left, float top, float width, float height)
         {
             Left = left;
             Top = top;
