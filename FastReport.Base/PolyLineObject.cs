@@ -624,7 +624,7 @@ namespace FastReport
 
         #region Protected Internal Enums
 
-        protected internal enum PolygonSelectionMode : int
+        protected internal enum PolygonSelectionMode
         {
             MoveAndScale,
             Normal,
