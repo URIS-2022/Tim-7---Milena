@@ -987,7 +987,7 @@ namespace FastReport.Barcode
       if (image == null)
         return;
       
-      Brush light = Brushes.White;
+      
       Brush dark = new SolidBrush(Color);
       int stride = (width + 7) / 8;
 
