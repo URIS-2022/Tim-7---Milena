@@ -92,11 +92,8 @@ namespace FastReport
         /// </summary>
         [DefaultValue(false)]
         [Category("Behavior")]
-        public bool PrintOnBottom
-        {
-            get { return printOnBottom; }
-            set { printOnBottom = value; }
-        }
+        public bool PrintOnBottom { get; set; }
+        
 
         /// <summary>
         /// Gets or sets a value indicating that the band should be printed together with its child band.
