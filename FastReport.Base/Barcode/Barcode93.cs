@@ -130,7 +130,7 @@ namespace FastReport.Barcode
 
           if (weightK > 15)
             weightC = 1;
-        };
+        }
 
         checkK += checkC;
 
