@@ -349,7 +349,7 @@ namespace FastReport.CrossView
       ShowXAxisFieldsCaption = src.ShowXAxisFieldsCaption;
       ShowYAxisFieldsCaption = src.ShowYAxisFieldsCaption;
       Style = src.Style;
-      //            MatrixEvenStylePriority = src.MatrixEvenStylePriority;
+      
     }
 
     /// <inheritdoc/>
