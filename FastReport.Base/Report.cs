@@ -2290,7 +2290,7 @@ namespace FastReport
         /// <remarks>
         /// This method is obsolete. Use the <see cref="RegisterData(IEnumerable, string)"/> method instead.
         /// </remarks>
-        public void RegisterData(IEnumerable data, string name, BOConverter flags, int maxNestingLevel)
+        public void RegisterData(IEnumerable data, string name, BOConverters flags, int maxNestingLevel)
         {
             RegisterData(data, name, maxNestingLevel);
         }
