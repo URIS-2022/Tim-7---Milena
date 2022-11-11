@@ -147,15 +147,13 @@ namespace FastReport.Data.JsonConnection
         /// <inheritdoc/>
         public override void InitSchema()
         {
-            if (Columns.Count == 0 || UpdateSchema && !StoreData)
+            if (Columns.Count == 0 || UpdateSchema && !StoreData && Connection is JsonDataSourceConnection)
             {
 
-                if (Connection is JsonDataSourceConnection)
-                {
                     JsonDataSourceConnection con = Connection as JsonDataSourceConnection;
 
                     InitSchema(this, con.JsonSchema, con.SimpleStructure);
-                }
+                
             }
             UpdateSchema = false;
         }
