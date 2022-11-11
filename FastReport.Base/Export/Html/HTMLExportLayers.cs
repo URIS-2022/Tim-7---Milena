@@ -114,7 +114,7 @@ namespace FastReport.Export.Html
         }
 
         private void Layer(FastString Page, ReportComponentBase obj,
-            float Left, float Top, float Width, float Height, FastString Text, string style, FastString addstyletag)
+            HTMLBorders border, FastString Text, string style, FastString addstyletag)
         {
             if (Page != null && obj != null)
             {
@@ -156,10 +156,10 @@ namespace FastReport.Export.Html
                 }
                 Page.Append("<div ").Append(style).Append(" style=\"").
                     Append(onclick != null || !string.IsNullOrEmpty(href) ? "cursor:pointer;" : "").
-                    Append("left:").Append(Px((leftMargin + Left) * Zoom - borderLeft / 2f)).
-                    Append("top:").Append(Px((topMargin + Top) * Zoom - borderTop / 2f)).
-                    Append("width:").Append(Px(Width * Zoom - borderRight / 2f - borderLeft / 2f)).
-                    Append("height:").Append(Px(Height * Zoom - borderBottom / 2f - borderTop / 2f));
+                    Append("left:").Append(Px((leftMargin + border.Left) * Zoom - borderLeft / 2f)).
+                    Append("top:").Append(Px((topMargin + border.Top) * Zoom - borderTop / 2f)).
+                    Append("width:").Append(Px(border.Width * Zoom - borderRight / 2f - borderLeft / 2f)).
+                    Append("height:").Append(Px(border.Height * Zoom - borderBottom / 2f - borderTop / 2f));
 
                 if (addstyletag != null)
                     Page.Append(addstyletag);
@@ -664,7 +664,9 @@ namespace FastReport.Export.Html
                 float x = Width > 0 ? obj.AbsLeft : (obj.AbsLeft + Width);
                 float y = Height > 0 ? hPos + obj.AbsTop : (hPos + obj.AbsTop + Height);
 
-                Layer(Page, obj, x, y, Width, Height, text, style, null);
+                HTMLBorders border = new HTMLBorders(x, y, Width, Height);
+
+                Layer(Page, obj, border, text, style, null);
             }
         }
 
@@ -679,7 +681,9 @@ namespace FastReport.Export.Html
 
             float x = obj.Width > 0 ? obj.AbsLeft : (obj.AbsLeft + obj.Width);
             float y = obj.Height > 0 ? hPos + obj.AbsTop : (hPos + obj.AbsTop + obj.Height);
-            Layer(Page, obj, x, y, obj.Width, obj.Height, text, null, addstyle);
+
+            HTMLBorders borders = new HTMLBorders(x, y, obj.Width, obj.Height);
+            Layer(Page, obj, borders, text, null, addstyle);
         }
 
         private void LayerBack(FastString Page, ReportComponentBase obj, FastString text)
@@ -707,7 +711,10 @@ namespace FastReport.Export.Html
             if (!(obj is PolyLineObject))
             {
                 if (obj.Fill is SolidFill)
-                    Layer(Page, obj, obj.AbsLeft, hPos + obj.AbsTop, obj.Width, obj.Height, text, GetStyleTag(UpdateCSSTable(obj)), null);
+                {
+                    HTMLBorders borders = new HTMLBorders(obj.AbsLeft, hPos + obj.AbsTop, obj.Width, obj.Height);
+                    Layer(Page, obj, borders, text, GetStyleTag(UpdateCSSTable(obj)), null);
+                }
                 else
                     LayerPicture(Page, obj, text);
             }
