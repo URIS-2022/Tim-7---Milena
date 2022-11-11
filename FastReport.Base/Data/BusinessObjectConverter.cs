@@ -11,7 +11,7 @@ namespace FastReport.Data
   /// <b>Obsolete</b>. Specifies a set of flags used to convert business objects into datasources.
   /// </summary>
   [Flags]
-  public enum BOConverterFlags
+  public enum BOConverter
   {
     /// <summary>
     /// komentar.
