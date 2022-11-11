@@ -1359,7 +1359,7 @@ namespace FastReport.Import.StimulSoft
                         {
                             exists = true;
                         }
-                        catch { }
+                        catch { Console.WriteLine("Error occured"); }
                     }
                 }
 
