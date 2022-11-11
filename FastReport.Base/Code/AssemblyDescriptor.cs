@@ -386,6 +386,25 @@ namespace FastReport.Code
             }
         }
 
+
+
+        private string GetAssemblyHash(CompilerParameters cp)
+        {
+            StringBuilder assemblyHashSB = new StringBuilder();
+            foreach (string a in cp.ReferencedAssemblies)
+                assemblyHashSB.Append(a);
+            var script = scriptText.ToString();
+            assemblyHashSB.Append(script);
+            byte[] hash;
+
+            using (HMACSHA1 hMACSHA1 = new HMACSHA1(Encoding.ASCII.GetBytes(shaKey)))
+            {
+                hash = hMACSHA1.ComputeHash(Encoding.Unicode.GetBytes(assemblyHashSB.ToString()));
+            }
+
+            return Convert.ToBase64String(hash);
+        }
+
         private void InternalCompile()
         {
             // configure compiler options
@@ -413,23 +432,6 @@ namespace FastReport.Code
 
             if (exception && errors != string.Empty)
                 throw new CompilerException(errors);
-        }
-
-        private string GetAssemblyHash(CompilerParameters cp)
-        {
-            StringBuilder assemblyHashSB = new StringBuilder();
-            foreach (string a in cp.ReferencedAssemblies)
-                assemblyHashSB.Append(a);
-            var script = scriptText.ToString();
-            assemblyHashSB.Append(script);
-            byte[] hash;
-
-            using (HMACSHA1 hMACSHA1 = new HMACSHA1(Encoding.ASCII.GetBytes(shaKey)))
-            {
-                hash = hMACSHA1.ComputeHash(Encoding.Unicode.GetBytes(assemblyHashSB.ToString()));
-            }
-
-            return Convert.ToBase64String(hash);
         }
 
         /// <summary>
