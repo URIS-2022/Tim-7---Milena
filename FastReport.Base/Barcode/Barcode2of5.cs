@@ -109,7 +109,8 @@ namespace FastReport.Barcode
 
         internal override string GetPattern()
         {
-            string result = "5050";   //Startcode
+            StringBuilder bld = new StringBuilder();
+            bld.Append("5050");
             string c;
             string text = base.text.Replace(".", "").Replace(" ", "");
 
@@ -135,17 +136,17 @@ namespace FastReport.Barcode
                         c = "6";
                     else
                         c = "5";
-                    result += c;
+                    bld.Append(c);
 
                     if (tabelle_2_5[CharToInt(text[i * 2 + 1]), j] == 1)
                         c = "1";
                     else
                         c = "0";
-                    result += c;
+                    bld.Append(c);
                 }
             }
 
-            result += "605";    // Stopcode
+            bld.Append("605");   // Stopcode
 
             base.text = text.Insert(2, ".").Insert(6, " ").Insert(10, ".");
 
@@ -154,10 +155,10 @@ namespace FastReport.Barcode
                 base.text = base.text.Substring(0, base.text.Length - 1);
             }
             else
-                base.text = base.text.Insert(14, " ");           
+                base.text = base.text.Insert(14, " ");
 
 
-            return result;
+            return bld.ToString();
         }
 
         /// <inheritdoc/>
