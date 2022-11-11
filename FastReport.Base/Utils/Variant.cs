@@ -133,15 +133,15 @@ namespace FastReport
     public object ToType(Type type) {
       return ToType(type, false, null);
     }
-    /// <summary>
-    /// Attempts to convert or typecast to the specified type.
-    /// </summary>
-    /// <param name="type">The type to convert or cast to.</param>
-    /// <param name="provider">An <see cref="IFormatProvider"/>
-    /// interface implementation that supplies culture-specific formatting information.</param>
-    /// <returns>The object after typecasting.</returns>
-    public object ToType(Type type, IFormatProvider provider) {
-      return ToType(type, false, provider);
+        /// <summary>
+        /// Attempts to convert or typecast to the specified type.
+        /// </summary>
+        /// <param name="conversionType">The type to convert or cast to.</param>
+        /// <param name="provider">An <see cref="IFormatProvider"/>
+        /// interface implementation that supplies culture-specific formatting information.</param>
+        /// <returns>The object after typecasting.</returns>
+        public object ToType(Type conversionType, IFormatProvider provider) {
+      return ToType(conversionType, false, provider);
     }
     private object ToType(Type type, bool nomap) {
       return ToType(type, nomap, null);
