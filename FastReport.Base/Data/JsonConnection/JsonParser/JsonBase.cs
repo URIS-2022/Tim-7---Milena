@@ -520,7 +520,7 @@ namespace FastReport
                                     throw reader.ThrowEOF('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F');
                                 if ('0' <= reader.Char && reader.Char <= '9')
                                 {
-                                    number = number * 0x10 + (int)(reader.Char - '0');
+                                    number = number * 0x10 + reader.Char - '0';
                                 }
                                 else if ('a' <= reader.Char && reader.Char <= 'f')
                                 {
