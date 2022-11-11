@@ -1254,7 +1254,6 @@ namespace FastReport.Barcode
           if (redo)
           {
             k = -1;
-            continue;
           }
         }
       }
