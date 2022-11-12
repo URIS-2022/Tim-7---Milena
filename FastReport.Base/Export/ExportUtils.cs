@@ -741,7 +741,7 @@ namespace FastReport.Export
                 if (cellReference.Length > 0)
                     x--;
                 int digit = x % MAX_CHARS;
-                char cellDig = (char)((char)'A' + (char)digit);
+                char cellDig =(char)('A' + (char)digit);
                 cellReference.Append(cellDig);
                 x -= digit;
                 x /= (MAX_CHARS);
