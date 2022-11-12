@@ -73,16 +73,16 @@ namespace FastReport.Barcode
   /// </summary>
   public class BarcodeEAN8 : BarcodeEan
   {
-    internal override void DrawText(IGraphics g, string barData)
+    internal override void DrawText(IGraphics g, string data)
     {
       // parts of pattern: 3 + 16 + 5 + 16 + 3
       float x1 = GetWidth(pattern.Substring(0, 3));
       float x2 = GetWidth(pattern.Substring(0, 3 + 16 + 1));
-      DrawString(g, x1, x2, barData.Substring(0, 4));
+      DrawString(g, x1, x2, data.Substring(0, 4));
 
       x1 = GetWidth(pattern.Substring(0, 3 + 16 + 5 - 1));
       x2 = GetWidth(pattern.Substring(0, 3 + 16 + 5 + 16));
-      DrawString(g, x1, x2, barData.Substring(4, 4));
+      DrawString(g, x1, x2, data.Substring(4, 4));
     }
 
     internal override string GetPattern()
