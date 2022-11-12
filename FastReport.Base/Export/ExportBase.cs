@@ -494,7 +494,11 @@ namespace FastReport.Export
         internal void ExportPageNew(int pageNo)
         {
             PreparedPage ppage = Report.PreparedPages.GetPreparedPage(pageNo);
-            {
+            AddedMethod1(ppage,pageNo);
+        }
+
+        private void AddedMethod1(PreparedPage ppage,int pageNo)
+        {
                 ReportPage page = null;
                 try
                 {
@@ -528,10 +532,10 @@ namespace FastReport.Export
                 {
                     ppage.EndGetPage(page);
                 }
-                if(page != null)
+                if (page != null)
                     page.Dispose();
-            }
         }
+        
 
         /// <summary>
         /// Exports the report to a file.
