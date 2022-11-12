@@ -323,23 +323,7 @@ namespace FastReport
         /// Gets reference to the parent <see cref="PageBase"/> object.
         /// </summary>
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public PageBase Page
-        {
-            get
-            {
-                if (this is PageBase)
-                    return (PageBase)this;
-
-                Base c = Parent;
-                while (c != null)
-                {
-                    if (c is PageBase)
-                        return (PageBase)c;
-                    c = c.Parent;
-                }
-                return null;
-            }
-        }
+        public PageBase Page { get; }
 
         /// <summary>
         /// Gets the collection of this object's child objects.
