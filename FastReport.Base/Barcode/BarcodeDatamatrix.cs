@@ -274,7 +274,7 @@ namespace FastReport.Barcode
     private int height;
     private int width;
     private DatamatrixSymbolSize symbolSize;
-    private DatamatrixEncoding encoding;
+    private DatamatrixEncoding encoding = 0;
     private int codePage;
     private int pixelSize;
         private bool autoEncode;
