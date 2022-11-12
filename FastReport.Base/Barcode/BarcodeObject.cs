@@ -117,11 +117,7 @@ namespace FastReport.Barcode
         /// </summary>
         [DefaultValue(Alignment.Left)]
         [Category("Appearance")]
-        public Alignment HorzAlign
-        {
-            get { return horzAlign; }
-            set { horzAlign = value; }
-        }
+        public Alignment HorzAlign { get; set; }
 
         /// <summary>
         /// Gets or sets the symbology name.
