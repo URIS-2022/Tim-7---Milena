@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 using FastReport.Utils;
+using System.Linq;
 
 namespace FastReport.Data
 {
@@ -94,9 +95,8 @@ namespace FastReport.Data
       EnumParameters(this, this_list);
       SortedList<string, Parameter> source_list = new SortedList<string,Parameter>();
       EnumParameters(source, source_list);
-      foreach (KeyValuePair<string,Parameter> kv in source_list)
+      foreach (KeyValuePair<string,Parameter> kv in source_list.Where(x => this_list.ContainsKey(x.Key)))
       {
-        if (this_list.ContainsKey(kv.Key))
           this_list[kv.Key].Value = kv.Value.Value;
       }
     }
