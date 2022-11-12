@@ -676,7 +676,7 @@ namespace FastReport.Import.StimulSoft
                 case "Stimulsoft.Report.BarCodes.StiFIMBarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiCode11BarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiUpcEBarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiUpcSup2BarCodeType":
+               
                 case "Stimulsoft.Report.BarCodes.StiJan13BarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiJan8BarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiSSCC18BarCodeType":
