@@ -813,7 +813,7 @@ namespace FastReport
           return char.Parse(_value.ToString());
         } catch {
           try {
-            return _value.ToString().ToCharArray()[0];
+            return _value.ToString()[0];
           } catch {}
         }
       }
