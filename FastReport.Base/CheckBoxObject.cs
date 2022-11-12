@@ -349,7 +349,7 @@ namespace FastReport
             else if (!String.IsNullOrEmpty(Expression))
             {
                 object value = Report.Calc(Expression);
-                Checked = value is bool && (bool)value == true;
+                Checked = value is bool;
             }
             if (!Checked && HideIfUnchecked)
                 Visible = false;
