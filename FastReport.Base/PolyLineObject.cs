@@ -536,8 +536,8 @@ namespace FastReport
         /// <param name="pointType">depreceted</param>
         protected PolyPoint addPoint(float localX, float localY, byte pointType)
         {
-            PolyPoint result;
-            pointsCollection.Add(result = new PolyPoint(localX, localY));
+            PolyPoint result = new PolyPoint(localX, localY);
+            pointsCollection.Add(result);
             RecalculateBounds();
             return result;
         }
