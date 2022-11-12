@@ -1342,16 +1342,7 @@ namespace FastReport.Barcode
          * @param position the position beyond which everything needs to be shifted
          * @param c the latch or shift character to insert at the specified position, after everything has been shifted
          */
-        void insert(int position, int c)
-        {
-            for (int i = 143; i > position; i--)
-            {
-                set[i] = set[i - 1];
-                character[i] = character[i - 1];
-            }
-            character[position] = c;
-        }
-
+       
         /**
          * Returns the error correction codewords for the specified data codewords.
          *
@@ -1419,6 +1410,16 @@ namespace FastReport.Barcode
         }
 
         //========================================================================
+        void insert(int position, int c)
+        {
+            for (int i = 143; i > position; i--)
+            {
+                set[i] = set[i - 1];
+                character[i] = character[i - 1];
+            }
+            character[position] = c;
+        }
+
 
         int[] insert(int[] original, int index, int[] inserted)
         {
