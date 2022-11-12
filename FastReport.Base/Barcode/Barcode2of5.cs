@@ -494,7 +494,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Generates the "2/5 Matrix" barcode.
     /// </summary>
-    public class Barcode2of5Matrix : Barcode2of5Interleaved
+    public class Barcode2Of5Matrix : Barcode2of5Interleaved
     {
         internal override string GetPattern()
         {
@@ -529,9 +529,9 @@ namespace FastReport.Barcode
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Barcode2of5Matrix"/> class with default settings.
+        /// Initializes a new instance of the <see cref="Barcode2Of5Matrix"/> class with default settings.
         /// </summary>
-        public Barcode2of5Matrix()
+        public Barcode2Of5Matrix()
         {
             ratioMin = 2.25f;
             ratioMax = 3;

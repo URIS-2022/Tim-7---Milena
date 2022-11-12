@@ -672,7 +672,7 @@ namespace FastReport.Barcode
         public readonly static BarcodeItem[] Items = {
             new BarcodeItem(typeof(Barcode2of5Interleaved), "2/5 Interleaved"),
             new BarcodeItem(typeof(Barcode2Of5Industrial), "2/5 Industrial"),
-            new BarcodeItem(typeof(Barcode2of5Matrix), "2/5 Matrix"),
+            new BarcodeItem(typeof(Barcode2Of5Matrix), "2/5 Matrix"),
             new BarcodeItem(typeof(BarcodeDeutscheIdentcode), "Deutsche Identcode"),
             new BarcodeItem(typeof(BarcodeDeutscheLeitcode),"Deutshe Leitcode"),
             new BarcodeItem(typeof(BarcodeITF14), "ITF-14"),

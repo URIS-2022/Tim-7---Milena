@@ -372,7 +372,7 @@ namespace FastReport.Import.DevExpress
             }
             else if (symbology.Contains("matrix2of5"))
             {
-                barcode.Barcode = new Barcode2of5Matrix();
+                barcode.Barcode = new Barcode2Of5Matrix();
             }
             else if (symbology.Contains("pdf417"))
             {
