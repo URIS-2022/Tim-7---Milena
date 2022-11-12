@@ -175,11 +175,8 @@ namespace FastReport.Gauge
         /// Gets or sets the color of ticks.
         /// </summary>
         [Browsable(true)]
-        public Color Color
-        {
-            get { return color; }
-            set { color = value; }
-        }
+        public Color Color { get; set; }
+        
 
         /// <summary>
         /// Gets or sets the count of ticks
