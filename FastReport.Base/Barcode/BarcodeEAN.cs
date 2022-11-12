@@ -10,7 +10,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// The base class for EAN barcodes.
   /// </summary>
-  public abstract class BarcodeEAN : LinearBarcodeBase
+  public abstract class BarcodeEan : LinearBarcodeBase
   {
     // Pattern for Barcode EAN Charset C
     // S1   L1   S2   L2
@@ -58,9 +58,9 @@ namespace FastReport.Barcode
     };
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BarcodeEAN"/> class with default settings.
+    /// Initializes a new instance of the <see cref="BarcodeEan"/> class with default settings.
     /// </summary>
-    protected BarcodeEAN()
+    protected BarcodeEan()
     {
       ratioMin = 2;
       ratioMax = 3;
@@ -71,7 +71,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the EAN8 barcode.
   /// </summary>
-  public class BarcodeEAN8 : BarcodeEAN
+  public class BarcodeEAN8 : BarcodeEan
   {
     internal override void DrawText(IGraphics g, string barData)
     {
@@ -111,7 +111,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the EAN13 barcode.
   /// </summary>
-  public class BarcodeEAN13 : BarcodeEAN
+  public class BarcodeEAN13 : BarcodeEan
   {
     //Zuordung der Paraitaetsfolgen f¹r EAN13
     private static string[,] tabelle_ParityEAN13 = {

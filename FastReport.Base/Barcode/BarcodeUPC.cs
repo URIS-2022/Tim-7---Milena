@@ -8,7 +8,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the UPC E0 barcode.
   /// </summary>
-  public class BarcodeUPC_E0 : BarcodeEAN
+  public class BarcodeUPC_E0 : BarcodeEan
   {
     // UPC E Parity Pattern Table , Number System 0
     internal static string[,] tabelle_UPC_E0 = {
