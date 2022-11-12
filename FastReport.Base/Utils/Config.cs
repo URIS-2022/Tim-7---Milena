@@ -636,7 +636,7 @@ namespace FastReport.Utils
                 {
                     if(value != null)
                     {
-                        OnStopListChanged?.Invoke(this, null);
+                        OnStopListChanged?.Invoke(this, EventArgs.Empty);
                         stopList = value;
                     }
                 }
