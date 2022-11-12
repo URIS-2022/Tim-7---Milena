@@ -261,7 +261,7 @@ namespace FastReport
         if (tt == typeof(string) ||
           tt == typeof(char)) {
           try {
-            foreach (char c in this.ToString().ToCharArray()) {
+            foreach (char c in this.ToString()) {
               if (!char.IsDigit(c) && c != decimalSep) return false;
             }
             //double d = (this.ToDouble() + (double)0.1);
