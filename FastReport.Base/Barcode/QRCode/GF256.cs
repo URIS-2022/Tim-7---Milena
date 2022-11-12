@@ -130,7 +130,7 @@ namespace FastReport.Barcode.QRCode
     {
       if (a == 0)
       {
-        throw new System.ArgumentException();
+        throw new System.ArgumentException("error","a");
       }
       return logTable[a];
     }
