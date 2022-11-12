@@ -563,11 +563,11 @@ namespace FastReport.Export.Html
         {
             if (!webMode)
             {
-                // under construction
+                Console.WriteLine("If");
             }
             else
             {
-                // under construction
+                Console.WriteLine("Else");
             }
         }
 
