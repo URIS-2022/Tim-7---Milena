@@ -548,9 +548,9 @@ namespace FastReport.Barcode
             {
                 if (AllowExpressions && !String.IsNullOrEmpty(Brackets))
                 {
-                    string[] brackets = Brackets.Split(',');
+                    string[] bracketsArray = Brackets.Split(',');
                     // collect expressions found in the text
-                    expressions.AddRange(CodeUtils.GetExpressions(Text, brackets[0], brackets[1]));
+                    expressions.AddRange(CodeUtils.GetExpressions(Text, bracketsArray[0], bracketsArray[1]));
                 }
             }
             return expressions.ToArray();
