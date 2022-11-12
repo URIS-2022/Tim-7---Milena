@@ -26,7 +26,7 @@ namespace FastReport.Data
             foreach (string key in doc.Names)
             {
                 object value = doc[key];
-                string x; 
+                //string x; 
                 if (value is BsonDocument)
                 {
                     string newParent = string.IsNullOrEmpty(parent) ? key : parent + "." + key;
@@ -35,12 +35,12 @@ namespace FastReport.Data
                 else if (value is BsonArray)                   
                     arrays.Add(new KeyValuePair<string, BsonArray>(key, (BsonArray)value));
                 else if (value is BsonTimestamp)
-                    x = doc[key].AsBsonTimestamp.ToLocalTime().ToString("s");
+                    //x = doc[key].AsBsonTimestamp.ToLocalTime().ToString("s");
                 else if (value is BsonNull)
-                    x = string.Empty;
+                    //x = string.Empty;
                 else
                 {
-                    x = value.ToString();
+                    //x = value.ToString();
                     string colName = string.IsNullOrEmpty(parent) ? key : parent + "." + key;
                     if (!dt.Columns.Contains(colName))
                         dt.Columns.Add(colName);
