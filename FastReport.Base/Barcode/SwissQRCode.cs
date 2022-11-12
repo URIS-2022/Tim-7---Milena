@@ -490,7 +490,10 @@ namespace FastReport.Barcode
                 int possibleQrIid = Convert.ToInt32(ibanCleared.Substring(4, 5));
                 foundQrIid = possibleQrIid >= 30000 && possibleQrIid <= 31999;
             }
-            catch { }
+            catch(Exception e) 
+            {
+                Console.WriteLine(e);
+            }
             return IsValidIban(iban) && foundQrIid;
         }
     }
