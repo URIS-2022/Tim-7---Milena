@@ -171,7 +171,7 @@ namespace FastReport.CrossView
       if (IsMeasure)
       {
         return measureName;
-      };
+      }
       if (isTotal)
       {
         return "Total of " + fieldName;
