@@ -115,8 +115,8 @@ namespace FastReport.Barcode
     private int bitColumns;
     private int codeRows;
     private int codeColumns;
-    private int rows;
-    private int columns;
+    private int rows = 1;
+    private int columns = 1;
     private int[] codewords = new int[MAX_DATA_CODEWORDS + 2];
     private int lenCodewords;
     private int errorLevel;
