@@ -127,18 +127,18 @@ namespace FastReport.Barcode
       {"A", "B", "B", "A", "B", "A"}     // 9 
     };
 
-    internal override void DrawText(IGraphics g, string barData)
+    internal override void DrawText(IGraphics g, string data)
     {
-      DrawString(g, -8, -2, barData.Substring(0, 1));
+      DrawString(g, -8, -2, data.Substring(0, 1));
 
       // parts of pattern: 3 + 24 + 5 + 24 + 3
       float x1 = GetWidth(pattern.Substring(0, 3));
       float x2 = GetWidth(pattern.Substring(0, 3 + 24 + 1));
-      DrawString(g, x1, x2, barData.Substring(1, 6));
+      DrawString(g, x1, x2, data.Substring(1, 6));
 
       x1 = GetWidth(pattern.Substring(0, 3 + 24 + 5 - 1));
       x2 = GetWidth(pattern.Substring(0, 3 + 24 + 5 + 24));
-      DrawString(g, x1, x2, barData.Substring(7, 6));
+      DrawString(g, x1, x2, data.Substring(7, 6));
     }
 
     internal override string GetPattern()
