@@ -471,7 +471,7 @@ namespace FastReport.Data
             subTotals = new TotalCollection(null);
             parentTotal = new TotalCollection(null);
             distinctValues = new Hashtable();
-            SetFlags(Flags.CanCopy, false);
+            SetFlags(F.CanCopy, false);
         }
     }
 }

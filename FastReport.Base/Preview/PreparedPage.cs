@@ -91,7 +91,7 @@ namespace FastReport.Preview
             if (isRunning)
                 engine.AddObjectToProcess(c, item);
 
-            if ((c.Flags & Flags.CanWriteChildren) == 0)
+            if ((c.Flags & F.CanWriteChildren) == 0)
             {
                 ObjectCollection childObjects = c.ChildObjects;
                 foreach (Base obj in childObjects)

@@ -1763,7 +1763,7 @@ namespace FastReport
             clip = true;
             highlight = new ConditionCollection();
             FlagSerializeStyle = false;
-            SetFlags(Flags.HasSmartTag, true);
+            SetFlags(F.HasSmartTag, true);
             preserveLastLineSpace =  false;
         }
     }

@@ -982,7 +982,7 @@ namespace FastReport
             {
                 foreach (Base c in AllObjects)
                 {
-                    if (c is ReportComponentBase && c.HasFlag(Flags.CanDraw))
+                    if (c is ReportComponentBase && c.HasFlag(F.CanDraw))
                     {
                         ReportComponentBase obj = c as ReportComponentBase;
                         if (!IsPrinting)

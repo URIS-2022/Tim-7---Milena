@@ -368,7 +368,7 @@ namespace FastReport
             checkedSymbol = CheckedSymbol.Check;
             uncheckedSymbol = UncheckedSymbol.None;
             checkWidthRatio = 1;
-            SetFlags(Flags.HasSmartTag, true);
+            SetFlags(F.HasSmartTag, true);
         }
     }
 }

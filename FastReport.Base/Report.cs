@@ -2634,8 +2634,8 @@ namespace FastReport
             autoFillDataSet = true;
             tag = null;
             ClearReportProperties();
-            SetFlags(Flags.CanMove | Flags.CanResize | Flags.CanDelete | Flags.CanEdit | Flags.CanChangeOrder |
-              Flags.CanChangeParent | Flags.CanCopy, false);
+            SetFlags(F.CanMove | F.CanResize | F.CanDelete | F.CanEdit | F.CanChangeOrder |
+              F.CanChangeParent | F.CanCopy, false);
             //FInlineImageCache = new InlineImageCache();
         }
 

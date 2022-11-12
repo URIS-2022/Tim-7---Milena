@@ -130,7 +130,7 @@ namespace FastReport.Data
       Alias = "";
       ReferenceName = "";
       Enabled = true;
-      SetFlags(Flags.CanEdit | Flags.CanCopy, false);
+      SetFlags(F.CanEdit | F.CanCopy, false);
     }
   }
 }

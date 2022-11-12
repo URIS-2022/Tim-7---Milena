@@ -60,7 +60,7 @@ namespace FastReport
     /// Specifies a set of actions that can be performed on the object in the design mode.
     /// </summary>
     [Flags]
-    public enum Flags
+    public enum F
     {
         /// <summary>
         /// Specifies no actions.
@@ -153,7 +153,7 @@ namespace FastReport
         #region Fields
         private string name;
         private Restrictions restrictions;
-        private Flags flags;
+        private F flags;
         private Base parent;
         private string baseName;
         private bool isAncestor;
@@ -194,7 +194,7 @@ namespace FastReport
             {
                 if (String.Compare(name, value, true) == 0)
                     return;
-                if (value != "" && Report != null && HasFlag(Flags.HasGlobalName))
+                if (value != "" && Report != null && HasFlag(F.HasGlobalName))
                 {
                     Base c = Report.FindObject(value);
                     if (c != null && c != this)
@@ -232,7 +232,7 @@ namespace FastReport
         /// Use this property only if you developing a new FastReport object.
         /// </remarks>
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public Flags Flags
+        public F Flags
         {
             get { return flags; }
         }
@@ -606,7 +606,7 @@ namespace FastReport
         /// </summary>
         /// <param name="flags">Flag to set.</param>
         /// <param name="value"><b>true</b> to set the flag, <b>false</b> to reset.</param>
-        public void SetFlags(Flags flags, bool value)
+        public void SetFlags(F flags, bool value)
         {
             if (value)
                 this.flags |= flags;
@@ -976,7 +976,7 @@ namespace FastReport
         /// </summary>
         /// <param name="flag">Flag to check.</param>
         /// <returns><b>true</b> if <b>Flags</b> property contains specified flag.</returns>
-        public bool HasFlag(Flags flag)
+        public bool HasFlag(F flag)
         {
             return (Flags & flag) > 0;
         }
@@ -1158,8 +1158,8 @@ namespace FastReport
             alias = "";
             baseName = ClassName;
             restrictions = new Restrictions();
-            SetFlags(Flags.CanMove | Flags.CanResize | Flags.CanDelete | Flags.CanEdit | Flags.CanChangeOrder |
-             Flags.CanChangeParent | Flags.CanCopy | Flags.CanDraw | Flags.CanShowChildrenInReportTree, true);
+            SetFlags(F.CanMove | F.CanResize | F.CanDelete | F.CanEdit | F.CanChangeOrder |
+             F.CanChangeParent | F.CanCopy | F.CanDraw | F.CanShowChildrenInReportTree, true);
         }
     }
 }

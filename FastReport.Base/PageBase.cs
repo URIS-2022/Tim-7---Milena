@@ -84,8 +84,8 @@ namespace FastReport
     /// </summary>
     public PageBase()
     {
-      SetFlags(Flags.CanMove | Flags.CanResize | Flags.CanDelete | Flags.CanChangeOrder | 
-        Flags.CanChangeParent | Flags.CanCopy, false);
+      SetFlags(F.CanMove | F.CanResize | F.CanDelete | F.CanChangeOrder | 
+        F.CanChangeParent | F.CanCopy, false);
     }
   }
 }

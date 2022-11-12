@@ -1117,7 +1117,7 @@ namespace FastReport
             mouseDownEvent = "";
             mouseEnterEvent = "";
             mouseLeaveEvent = "";
-            SetFlags(Flags.CanGroup, true);
+            SetFlags(F.CanGroup, true);
             if (BaseName.EndsWith("Object"))
                 BaseName = ClassName.Substring(0, ClassName.Length - 6);
         }

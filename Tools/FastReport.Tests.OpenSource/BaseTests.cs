@@ -17,12 +17,12 @@ namespace FastReport.Tests.Core
 
         private void SetFlags()
         {
-            report.SetFlags(Flags.CanChangeOrder, true);
-            report.SetFlags(Flags.CanChangeParent, true);
-            report.SetFlags(Flags.CanCopy, true);
-            report.SetFlags(Flags.CanDelete, false);
-            report.SetFlags(Flags.CanDraw, false);
-            report.SetFlags(Flags.CanEdit, false);
+            report.SetFlags(F.CanChangeOrder, true);
+            report.SetFlags(F.CanChangeParent, true);
+            report.SetFlags(F.CanCopy, true);
+            report.SetFlags(F.CanDelete, false);
+            report.SetFlags(F.CanDraw, false);
+            report.SetFlags(F.CanEdit, false);
         }
 
         [Fact]
@@ -31,12 +31,12 @@ namespace FastReport.Tests.Core
             report = new Report();
 
             SetFlags();
-            bool hasCanChangeOrder = report.Flags.HasFlag(Flags.CanChangeOrder);
-            bool hasCanChangeParent = report.Flags.HasFlag(Flags.CanChangeParent);
-            bool hasCanCopy = report.Flags.HasFlag(Flags.CanCopy);
-            bool hasCanDelete = report.Flags.HasFlag(Flags.CanDelete);
-            bool hasCanDrawr = report.Flags.HasFlag(Flags.CanDraw);
-            bool hasCanEdit = report.Flags.HasFlag(Flags.CanEdit);
+            bool hasCanChangeOrder = report.Flags.HasFlag(F.CanChangeOrder);
+            bool hasCanChangeParent = report.Flags.HasFlag(F.CanChangeParent);
+            bool hasCanCopy = report.Flags.HasFlag(F.CanCopy);
+            bool hasCanDelete = report.Flags.HasFlag(F.CanDelete);
+            bool hasCanDrawr = report.Flags.HasFlag(F.CanDraw);
+            bool hasCanEdit = report.Flags.HasFlag(F.CanEdit);
 
             Assert.True(hasCanChangeOrder);
             Assert.True(hasCanChangeParent);
@@ -154,19 +154,19 @@ namespace FastReport.Tests.Core
             report = new Report();
 
             SetFlags();
-            bool hasCanChangeOrder = report.Flags.HasFlag(Flags.CanChangeOrder);
-            bool hasCanChangeParent = report.Flags.HasFlag(Flags.CanChangeParent);
-            bool hasCanCopy = report.Flags.HasFlag(Flags.CanCopy);
-            bool hasCanDelete = report.Flags.HasFlag(Flags.CanDelete);
-            bool hasCanDraw = report.Flags.HasFlag(Flags.CanDraw);
-            bool hasCanEdit = report.Flags.HasFlag(Flags.CanEdit);
+            bool hasCanChangeOrder = report.Flags.HasFlag(F.CanChangeOrder);
+            bool hasCanChangeParent = report.Flags.HasFlag(F.CanChangeParent);
+            bool hasCanCopy = report.Flags.HasFlag(F.CanCopy);
+            bool hasCanDelete = report.Flags.HasFlag(F.CanDelete);
+            bool hasCanDraw = report.Flags.HasFlag(F.CanDraw);
+            bool hasCanEdit = report.Flags.HasFlag(F.CanEdit);
 
-            bool tHasCanChangeOrder = report.HasFlag(Flags.CanChangeOrder);
-            bool tHasCanChangeParent = report.Flags.HasFlag(Flags.CanChangeParent);
-            bool tHasCanCopy = report.HasFlag(Flags.CanCopy);
-            bool tHasCanDelete = report.HasFlag(Flags.CanDelete);
-            bool tHasCanDraw = report.HasFlag(Flags.CanDraw);
-            bool tHasCanEdit = report.HasFlag(Flags.CanEdit);
+            bool tHasCanChangeOrder = report.HasFlag(F.CanChangeOrder);
+            bool tHasCanChangeParent = report.Flags.HasFlag(F.CanChangeParent);
+            bool tHasCanCopy = report.HasFlag(F.CanCopy);
+            bool tHasCanDelete = report.HasFlag(F.CanDelete);
+            bool tHasCanDraw = report.HasFlag(F.CanDraw);
+            bool tHasCanEdit = report.HasFlag(F.CanEdit);
 
             Assert.Equal(hasCanChangeOrder, tHasCanChangeOrder);
             Assert.Equal(hasCanChangeParent, tHasCanChangeParent);

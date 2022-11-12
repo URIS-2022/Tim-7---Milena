@@ -679,7 +679,7 @@ namespace FastReport
         public PictureObject()
         {
             transparentColor = Color.Transparent;
-            SetFlags(Flags.HasSmartTag, true);
+            SetFlags(F.HasSmartTag, true);
             ResetImageIndex();
         }
         

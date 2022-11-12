@@ -271,7 +271,7 @@ namespace FastReport
         public HtmlObject()
         {
             FlagSerializeStyle = false;
-            SetFlags(Flags.HasSmartTag, true);
+            SetFlags(F.HasSmartTag, true);
         }
     }
 }

@@ -1043,7 +1043,7 @@ namespace FastReport
             ShiftMode = ShiftMode.Never;
             if (BaseName.EndsWith("Band"))
                 BaseName = ClassName.Remove(ClassName.IndexOf("Band"));
-            SetFlags(Flags.CanMove | Flags.CanChangeOrder | Flags.CanChangeParent | Flags.CanCopy | Flags.CanGroup, false);
+            SetFlags(F.CanMove | F.CanChangeOrder | F.CanChangeParent | F.CanCopy | F.CanGroup, false);
             FlagUseStartNewPage = true;
             FlagCheckFreeSpace = true;
         }

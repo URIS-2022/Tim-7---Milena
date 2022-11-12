@@ -278,7 +278,7 @@ namespace FastReport.Data
       expression = "";
       description = "";
       parameters = new ParameterCollection(this);
-      SetFlags(Flags.CanCopy | Flags.CanEdit, false);
+      SetFlags(F.CanCopy | F.CanEdit, false);
     }
   }
 }

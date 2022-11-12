@@ -369,7 +369,7 @@ namespace FastReport.Data
         public override void SetParent(Base value)
         {
             base.SetParent(value);
-            SetFlags(Flags.CanEdit, Connection != null);
+            SetFlags(F.CanEdit, Connection != null);
         }
 
         /// <inheritdoc/>

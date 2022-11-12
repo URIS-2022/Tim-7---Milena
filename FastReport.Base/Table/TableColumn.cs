@@ -253,7 +253,7 @@ namespace FastReport.Table
         {
             maxWidth = 5000;
             Width = DefaultWidth;
-            SetFlags(Flags.CanCopy | Flags.CanDelete | Flags.CanWriteBounds, false);
+            SetFlags(F.CanCopy | F.CanDelete | F.CanWriteBounds, false);
             BaseName = "Column";
         }
     }

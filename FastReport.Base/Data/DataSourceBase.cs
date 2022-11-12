@@ -763,7 +763,7 @@ namespace FastReport.Data
       additionalFilter = new Hashtable();
       columnIndices = new Hashtable();
       rowIndices = new Hashtable();
-      SetFlags(Flags.HasGlobalName, true);
+      SetFlags(F.HasGlobalName, true);
     }
   
     private class RowComparer : IComparer

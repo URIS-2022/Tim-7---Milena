@@ -614,7 +614,7 @@ namespace FastReport
       parentIdColumn = "";
       indent = 37.8f;
       rowCount = 1;
-      SetFlags(Flags.HasSmartTag, true);
+      SetFlags(F.HasSmartTag, true);
     }
   }
 }

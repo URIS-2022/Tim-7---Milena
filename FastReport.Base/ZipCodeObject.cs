@@ -369,7 +369,7 @@ namespace FastReport
       
       FlagSimpleBorder = true;
       Border.Width = 3;
-      SetFlags(Flags.HasSmartTag, true);
+      SetFlags(F.HasSmartTag, true);
     }
     
     static ZipCodeObject()

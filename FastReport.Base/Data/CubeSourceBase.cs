@@ -169,7 +169,7 @@ namespace FastReport.Data
     /// </summary>
     protected CubeSourceBase()
     {
-      SetFlags(Flags.HasGlobalName, true);
+      SetFlags(F.HasGlobalName, true);
     }
   
   }

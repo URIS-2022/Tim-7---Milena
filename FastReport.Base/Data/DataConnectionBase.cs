@@ -834,7 +834,7 @@ namespace FastReport.Data
             connectionStringExpression = "";
             IsSqlBased = true;
             commandTimeout = 30;
-            SetFlags(Flags.CanEdit, true);
+            SetFlags(F.CanEdit, true);
         }
     }
 }

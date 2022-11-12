@@ -282,7 +282,7 @@ namespace FastReport.Matrix
             cell.TextFill = new SolidFill(Color.Gray);
             cell.HorzAlign = HorzAlign.Center;
             cell.VertAlign = VertAlign.Center;
-            cell.SetFlags(Flags.CanEdit, false);
+            cell.SetFlags(F.CanEdit, false);
         }
 
         private Point GetBodyLocation()
@@ -1061,7 +1061,7 @@ namespace FastReport.Matrix
                     // call AssignAll with assignName parameter to preserve names of objects contained in a cell
                     ResultTable[x, y].Name = cell.Name;
                     cell.AssignAll(ResultTable[x, y], true);
-                    cell.SetFlags(Flags.CanEdit, true);
+                    cell.SetFlags(F.CanEdit, true);
                 }
             }
 

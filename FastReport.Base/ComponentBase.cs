@@ -425,7 +425,7 @@ namespace FastReport
             visibleExpression = "";
             printable = true;
             printableExpression = "";
-            SetFlags(Flags.CanWriteBounds | Flags.HasGlobalName, true);
+            SetFlags(F.CanWriteBounds | F.HasGlobalName, true);
             tag = "";
         }
 
@@ -462,7 +462,7 @@ namespace FastReport
                 writer.WriteBool("Printable", Printable);
             if (PrintableExpression != c.PrintableExpression)
                 writer.WriteStr("PrintableExpression", PrintableExpression);
-            if (HasFlag(Flags.CanWriteBounds))
+            if (HasFlag(F.CanWriteBounds))
             {
                 if (FloatDiff(Left, c.Left))
                     writer.WriteFloat("Left", Left);

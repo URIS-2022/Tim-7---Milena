@@ -213,7 +213,7 @@ namespace FastReport.CrossView
             cell.TextFill = new SolidFill(Color.Gray);
             cell.HorzAlign = HorzAlign.Center;
             cell.VertAlign = VertAlign.Center;
-            cell.SetFlags(Flags.CanEdit, false);
+            cell.SetFlags(F.CanEdit, false);
         }
 
         private void InitTemplateTable()
@@ -526,7 +526,7 @@ namespace FastReport.CrossView
                 {
                     TableCell cell = CrossView[x, y];
                     cell.AssignAll(ResultTable[x, y]);
-                    cell.SetFlags(Flags.CanEdit, true);
+                    cell.SetFlags(F.CanEdit, true);
                 }
             }
             UpdateDescriptors();

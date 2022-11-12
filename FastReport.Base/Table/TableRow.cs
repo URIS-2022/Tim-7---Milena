@@ -344,7 +344,7 @@ namespace FastReport.Table
             if (Parent is TableResult)
             {
                 // write children by itself
-                SetFlags(Flags.CanWriteChildren, true);
+                SetFlags(F.CanWriteChildren, true);
                 writer.SaveChildren = true;
 
                 TableResult table = Parent as TableResult;
@@ -388,7 +388,7 @@ namespace FastReport.Table
             cells = new List<TableCellData>();
             maxHeight = 1000;
             Height = DefaultHeight;
-            SetFlags(Flags.CanCopy | Flags.CanDelete | Flags.CanWriteBounds, false);
+            SetFlags(F.CanCopy | F.CanDelete | F.CanWriteBounds, false);
             BaseName = "Row";
         }
     }

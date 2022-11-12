@@ -160,7 +160,7 @@ namespace FastReport.Data
     {
       Expression = "";
       DefaultValue = "";
-      SetFlags(Flags.CanEdit | Flags.CanCopy, false);
+      SetFlags(F.CanEdit | F.CanCopy, false);
     }
   }
 }

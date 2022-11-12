@@ -120,7 +120,7 @@ namespace FastReport.Data
     /// </summary>
     public Relation()
     {
-      SetFlags(Flags.CanEdit, true);
+      SetFlags(F.CanEdit, true);
     }
   }
 }

@@ -641,7 +641,7 @@ namespace FastReport.Barcode
             NoDataText = "";
             AllowExpressions = false;
             Brackets = "[,]";
-            SetFlags(Flags.HasSmartTag, true);
+            SetFlags(F.HasSmartTag, true);
         }
 
     }

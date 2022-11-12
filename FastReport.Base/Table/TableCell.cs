@@ -501,8 +501,8 @@ namespace FastReport.Table
             colSpan = 1;
             rowSpan = 1;
             Padding = new Padding(2, 1, 2, 1);
-            SetFlags(Flags.CanDelete | Flags.CanCopy | Flags.CanMove | Flags.CanResize |
-              Flags.CanChangeParent | Flags.CanDraw | Flags.CanWriteBounds, false);
+            SetFlags(F.CanDelete | F.CanCopy | F.CanMove | F.CanResize |
+              F.CanChangeParent | F.CanDraw | F.CanWriteBounds, false);
             BaseName = "Cell";
         }
     }
