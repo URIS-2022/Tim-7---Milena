@@ -542,7 +542,14 @@ namespace FastReport.Barcode
         if (idx < 0)
           throw new Exception(Res.Get("Messages,InvalidBarcode2"));
 
-        result += tabelle_128[idx].data;
+
+        StringBuilder bld = new StringBuilder();
+        bld.Append(tabelle_128[idx].data);
+
+        result = bld.ToString();
+
+
+        
         checksum += idx * codeword_pos;
         codeword_pos++;
 
