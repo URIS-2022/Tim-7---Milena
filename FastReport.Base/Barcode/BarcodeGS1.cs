@@ -221,7 +221,7 @@ namespace FastReport.Barcode
             64, 34, 23, 69, 49, 68, 46, 59
         };
 
-        private int[] FinderPattern =
+        private readonly int[] FinderPattern =
         {
             3, 8, 2, 1, 1,
             3, 5, 5, 1, 1,
