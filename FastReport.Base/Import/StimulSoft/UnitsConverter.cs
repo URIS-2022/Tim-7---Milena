@@ -671,7 +671,7 @@ namespace FastReport.Import.StimulSoft
                     break;
 
                 case "Stimulsoft.Report.BarCodes.StiStandard2of5BarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiDutchKIXBarCodeType":
+                
                 case "Stimulsoft.Report.BarCodes.StiRoyalMail4StateBarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiFIMBarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiCode11BarCodeType":
