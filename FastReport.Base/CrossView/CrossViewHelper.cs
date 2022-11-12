@@ -610,11 +610,6 @@ namespace FastReport.CrossView
 
         public void StartPrint()
         {
-            //todo
-            /*
-                  if ((Matrix.Data.Columns.Count == 0 && Matrix.Data.Rows.Count == 0) || Matrix.Data.Cells.Count == 0)
-                    throw new Exception(String.Format(Res.Get("Messages,MatrixError"), Matrix.Name));
-            */
             designTime = false;
             /*
                   FNoColumns = Matrix.Data.Columns.Count == 0;
