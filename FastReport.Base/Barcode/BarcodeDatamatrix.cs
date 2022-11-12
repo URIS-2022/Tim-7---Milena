@@ -1341,7 +1341,7 @@ namespace FastReport.Barcode
           case 68:
             return poly68;
         }
-        return null;
+        return new int[0];
       }
 
       private static void ReedSolomonBlock(byte[] wd, int nd, byte[] ncout, int nc, int[] c)
