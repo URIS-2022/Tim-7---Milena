@@ -15,7 +15,7 @@ namespace FastReport.Barcode.QRCode
   /*/// <summary>
   /// Contains conversion support elements such as classes, interfaces and static methods.
   /// </summary>*/
-  internal class SupportClass
+  internal static class SupportClass
   {
     /*******************************/
     /*/// <summary>
