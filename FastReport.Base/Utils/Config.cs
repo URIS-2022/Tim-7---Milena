@@ -523,7 +523,7 @@ namespace FastReport.Utils
 
                 try
                 {
-                    var assembly = Assembly.LoadFrom(pluginName);
+                    var assembly = Assembly.Load(pluginName);
                     ProcessAssembly(assembly);
                 }
                 catch
