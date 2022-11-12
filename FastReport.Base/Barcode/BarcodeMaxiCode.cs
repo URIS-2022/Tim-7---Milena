@@ -16,17 +16,7 @@ namespace FastReport.Barcode
         /// Sets the MaxiCode mode to use. Only modes 2 to 6 are supported.
         /// </summary>
         [DefaultValue(4)]
-        public int Mode
-        {
-            get
-            {
-                return mode;
-            }
-            set
-            {
-                mode = value;
-            }
-        }
+        public int Mode { get; set; }
 
         //public int ECI { get; set; }
 
