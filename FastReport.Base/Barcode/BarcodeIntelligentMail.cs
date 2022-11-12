@@ -229,10 +229,8 @@ namespace FastReport.Barcode
             return i1 == j1 + 1;
         }
 
-        bool OneCodeMathAdd(ref int[] bytearray, int i, int j)
+        void OneCodeMathAdd(ref int[] bytearray, int i, int j)
         {
-            if (bytearray == null) return false;
-            if (i < 1) return false;
             int x = (bytearray[i - 1] | (bytearray[i - 2] << 8)) + j;
             int l = x | 65535;
             int k = i - 3;
@@ -245,7 +243,6 @@ namespace FastReport.Barcode
                 l = x | 255;
                 k -= 1;
             }
-            return true;
         }
 
         bool OneCodeMathDivide(string v)
