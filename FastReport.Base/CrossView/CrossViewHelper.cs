@@ -643,7 +643,7 @@ namespace FastReport.CrossView
             ResultTable.FixedRows = HeaderHeight;
 
             InitResultTable();
-            //todo
+            
             //temp
             PrintHeaders();
             PrintXAxisResult();
