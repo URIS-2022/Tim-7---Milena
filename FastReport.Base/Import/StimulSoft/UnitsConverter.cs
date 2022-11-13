@@ -670,7 +670,7 @@ namespace FastReport.Import.StimulSoft
                     barcode.Barcode = new BarcodePharmacode();
                     break;
 
-                case "Stimulsoft.Report.BarCodes.StiStandard2of5BarCodeType":
+                
                 
                 case "Stimulsoft.Report.BarCodes.StiRoyalMail4StateBarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiFIMBarCodeType":
