@@ -8,7 +8,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the UPC E0 barcode.
   /// </summary>
-  public class BarcodeUPC_E0 : BarcodeEan
+  public class BarcodeUpcE0 : BarcodeEan
   {
     // UPC E Parity Pattern Table , Number System 0
     internal static string[,] tabelle_UPC_E0 = {
@@ -63,9 +63,9 @@ namespace FastReport.Barcode
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="BarcodeUPC_E0"/> class with default settings.
+    /// Initializes a new instance of the <see cref="BarcodeUpcE0"/> class with default settings.
     /// </summary>
-    public BarcodeUPC_E0()
+    public BarcodeUpcE0()
     {
       extra1 = 8;
       extra2 = 8;
@@ -75,7 +75,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the UPC E1 barcode.
   /// </summary>
-  public class BarcodeUPC_E1 : BarcodeUPC_E0
+  public class BarcodeUPC_E1 : BarcodeUpcE0
   {
     internal override string GetPattern()
     {
@@ -104,7 +104,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the UPC A barcode.
   /// </summary>
-  public class BarcodeUPC_A : BarcodeUPC_E0
+  public class BarcodeUPC_A : BarcodeUpcE0
   {
     internal override void DrawText(IGraphics g, string data)
     {
@@ -152,7 +152,7 @@ namespace FastReport.Barcode
   /// <summary>
   /// Generates the 2-digit supplement barcode.
   /// </summary>
-  public class BarcodeSupplement2 : BarcodeUPC_E0
+  public class BarcodeSupplement2 : BarcodeUpcE0
   {
     internal string getSupp(string Nr)
     {
