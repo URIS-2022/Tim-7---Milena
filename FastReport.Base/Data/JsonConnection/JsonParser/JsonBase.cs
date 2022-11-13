@@ -269,7 +269,6 @@ namespace FastReport
                     {
                         reader.ReadNext();
                         reader.SkipWhiteSpace();
-                        continue;
                     }
                     else if (reader.Char == ']')
                         break;
