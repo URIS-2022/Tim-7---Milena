@@ -123,6 +123,7 @@ namespace FastReport.Data
           }
           catch
           {
+                        Console.WriteLine("Error");
           }
         }
 
