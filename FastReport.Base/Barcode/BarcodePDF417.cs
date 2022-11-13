@@ -1190,13 +1190,10 @@ namespace FastReport.Barcode
         if (CheckSegmentType(v, 'B') && GetSegmentLength(v) == 1 && CheckSegmentType(vp, 'T') && CheckSegmentType(vn, 'T')
               && GetSegmentLength(vp) + GetSegmentLength(vn) >= 3)
         {
-          
-          
             vp.end = vn.end;
             segmentList.Remove(k);
             segmentList.Remove(k);
             k = -1;
-            continue;
           
         }
       }
