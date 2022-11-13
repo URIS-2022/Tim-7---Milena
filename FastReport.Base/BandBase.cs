@@ -69,11 +69,7 @@ namespace FastReport
         /// </summary>
         [Category("Behavior")]
         [DefaultValue(1)]
-        public int RepeatBandNTimes
-        {
-            get { return repeatBandNTimes; }
-            set { repeatBandNTimes = value; }
-        }
+        public int RepeatBandNTimes { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating that the first row can start a new report page.
