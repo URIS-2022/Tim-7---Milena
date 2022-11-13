@@ -2523,10 +2523,6 @@ namespace FastReport.Utils
                         }
                         // TODO: dispose managed state (managed objects).
                     }
-
-                    
-                    // TODO: set large fields to null.
-
                     disposedValue = true;
                 }
             }
