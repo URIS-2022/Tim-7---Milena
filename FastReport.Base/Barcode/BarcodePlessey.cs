@@ -119,36 +119,45 @@ namespace FastReport.Barcode
             appendPattern(result, pos, endWidths, false);
             //return result;
             #endregion
-
-            string pattern = "" + start;
+            StringBuilder bld = new StringBuilder();
+            bld.Append("");
+            bld.Append(start);
+            //string pattern = "" + start;
 
             //data
             foreach(char c in text)
             {
                 int i;
                 if (int.TryParse("" + c, out i))
-                    pattern += tabelle[i];
+                    bld.Append(tabelle[i]);
+                    //pattern += tabelle[i];
                 else
                 {
                     switch (c)
                     {
                         case 'A':
-                            pattern += tabelle[10];
+                            bld.Append(tabelle[10]);
+                            //pattern += tabelle[10];
                             break;
                         case 'B':
-                            pattern += tabelle[11];
+                            bld.Append(tabelle[11]);
+                            //pattern += tabelle[11];
                             break;
                         case 'C':
-                            pattern += tabelle[12];
+                            bld.Append(tabelle[12]);
+                            //pattern += tabelle[12];
                             break;
                         case 'D':
-                            pattern += tabelle[13];
+                            bld.Append(tabelle[13]);
+                            //pattern += tabelle[13];
                             break;
                         case 'E':
-                            pattern += tabelle[14];
+                            bld.Append(tabelle[14);
+                            //pattern += tabelle[14];
                             break;
                         case 'F':
-                            pattern += tabelle[15];
+                            bld.Append(tabelle[15]);
+                            //pattern += tabelle[15];
                             break;
                         default:
                             throw new Exception("internal Error");
@@ -162,15 +171,19 @@ namespace FastReport.Barcode
                 switch (crcBuffer[text.Length * 4 + i])
                 {
                     case 0:
-                        pattern += "500";
+                        bld.Append("500");
+                        //pattern += "500";
                         break;
                     case 1:
-                        pattern += "60";
+                        bld.Append("60");
+                        //pattern += "60";
                         break;
                 }
             }
 
-            pattern += end;
+            bld.Append(end);
+            //pattern += end;
+            string pattern = bld.ToString();
 
             return pattern;
         }
