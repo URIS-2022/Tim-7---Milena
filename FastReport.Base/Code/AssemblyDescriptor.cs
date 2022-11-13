@@ -737,7 +737,7 @@ namespace FastReport.Code
             compileLocker = new object();
         }
 
-        private class SourcePosition
+        private sealed class SourcePosition
         {
             public readonly string sourceObject;
             public readonly int start;
