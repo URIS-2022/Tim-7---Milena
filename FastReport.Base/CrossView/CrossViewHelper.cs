@@ -637,7 +637,7 @@ namespace FastReport.CrossView
 
         public void FinishPrint()
         {
-            //todo
+            
             UpdateDescriptors();
             ResultTable.FixedColumns = HeaderWidth;
             ResultTable.FixedRows = HeaderHeight;
