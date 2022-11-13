@@ -417,7 +417,7 @@ namespace FastReport.Data.JsonConnection
         /// <inheritdoc/>
         protected override object GetValue(string alias)
         {
-            // TODO TEST
+            
             Column column = this;
             string[] colAliases = alias.Split('.');
 
