@@ -118,11 +118,7 @@ namespace FastReport
         /// </remarks>
         [Category("Navigation")]
         [Editor("FastReport.TypeEditors.ExpressionEditor, FastReport", typeof(UITypeEditor))]
-        public string OutlineExpression
-        {
-            get { return outlineExpression; }
-            set { outlineExpression = value; }
-        }
+        public string OutlineExpression { get; set; }
 
         /// <summary>
         /// Gets or sets a child band that will be printed right after this band.
