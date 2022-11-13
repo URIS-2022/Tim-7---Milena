@@ -205,7 +205,7 @@ namespace FastReport.Barcode
     /// <summary>
     /// Generates the "Deutsche Leitcode" barcode.
     /// </summary>
-    public class BarcodeDeutscheLeitcode : Barcode2of5Interleaved
+    public sealed class BarcodeDeutscheLeitcode : Barcode2of5Interleaved
     {
         #region Properties
         /// <summary>
