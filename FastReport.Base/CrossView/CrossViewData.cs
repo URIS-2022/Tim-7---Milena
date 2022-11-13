@@ -44,7 +44,7 @@ namespace FastReport.CrossView
     /// <summary>
     /// 
     /// </summary>
-    public bool MeasuresInXAxis { get { return cubeSource != null ? cubeSource.MeasuresInXAxis : false; } }
+    public bool MeasuresInXAxis { get { return cubeSource.MeasuresInXAxis; } }
     /// <summary>
     /// 
     /// </summary>
