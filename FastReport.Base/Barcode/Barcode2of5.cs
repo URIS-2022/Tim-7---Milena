@@ -27,7 +27,7 @@ namespace FastReport.Barcode
         internal override string GetPattern()
         {
             string text = base.text;
-            string result = "5050";   //Startcode
+            //string result = "5050";   //Startcode
             string c;
 
             if (CalcCheckSum)
@@ -42,6 +42,8 @@ namespace FastReport.Barcode
                     text = "0" + text;
             }
 
+            StringBuilder bld = new StringBuilder();
+            bld.Append("5050");
             for (int i = 0; i < (text.Length / 2); i++)
             {
                 for (int j = 0; j <= 4; j++)
@@ -50,17 +52,21 @@ namespace FastReport.Barcode
                         c = "6";
                     else
                         c = "5";
-                    result += c;
+                    bld.Append(c);
+                    //result += c;
 
                     if (tabelle_2_5[CharToInt(text[i * 2 + 1]), j] == 1)
                         c = "1";
                     else
                         c = "0";
-                    result += c;
+                    bld.Append(c);
+                    //result += c;
                 }
             }
 
-            result += "605";    // Stopcode
+            bld.Append("605");
+            string result = bld.ToString();
+            //result += "605";    // Stopcode
             return result;
         }
 
