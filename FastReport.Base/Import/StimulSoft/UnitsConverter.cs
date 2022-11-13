@@ -672,7 +672,7 @@ namespace FastReport.Import.StimulSoft
 
                 
                 
-                case "Stimulsoft.Report.BarCodes.StiRoyalMail4StateBarCodeType":
+                
                 case "Stimulsoft.Report.BarCodes.StiFIMBarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiCode11BarCodeType":
                 case "Stimulsoft.Report.BarCodes.StiUpcEBarCodeType":
