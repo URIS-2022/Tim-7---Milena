@@ -22,7 +22,7 @@ namespace FastReport
        
         private bool firstRowStartsNewPage;
         private bool printOnBottom;
-        private bool keepChild;
+        
         private string outlineExpression;
         private int rowNo;
         private int absRowNo;
