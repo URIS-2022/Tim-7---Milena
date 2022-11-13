@@ -364,7 +364,7 @@ namespace FastReport.Export.Html
                                             if(top < 0)
                                             {
                                                 if(obj.Height > height)
-                                                top = (obj.Height - height - obj.Padding.Bottom + obj.Padding.Top) / 2;
+                                                    top = (obj.Height - height - obj.Padding.Bottom + obj.Padding.Top) / 2;
                                                 else
                                                 top = (height - obj.Height - obj.Padding.Bottom + obj.Padding.Top) / 2;
                                             }
