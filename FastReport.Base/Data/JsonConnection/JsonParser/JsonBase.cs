@@ -523,7 +523,7 @@ namespace FastReport
                                 }
                                 else if ('a' <= reader.Char && reader.Char <= 'f')
                                 {
-                                    number = number * 0x10 + 10 + (int)(reader.Char - 'a');
+                                    number = number * 0x10 + 10 + (reader.Char - 'a');
                                 }
                                 else if ('A' <= reader.Char && reader.Char <= 'F')
                                 {
