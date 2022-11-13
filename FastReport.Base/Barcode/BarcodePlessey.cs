@@ -152,7 +152,7 @@ namespace FastReport.Barcode
                             //pattern += tabelle[13];
                             break;
                         case 'E':
-                            bld.Append(tabelle[14);
+                            bld.Append(tabelle[14]);
                             //pattern += tabelle[14];
                             break;
                         case 'F':
