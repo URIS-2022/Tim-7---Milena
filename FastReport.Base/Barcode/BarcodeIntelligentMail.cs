@@ -197,7 +197,7 @@ namespace FastReport.Barcode
             }
         }
 
-        void OneCodeInitializeNof13Table(ref int[] ai, int i, int j)
+        bool OneCodeInitializeNof13Table(ref int[] ai, int i, int j)
         {
             int i1 = 0;
             int j1 = j - 1;
@@ -226,7 +226,7 @@ namespace FastReport.Barcode
                     }
                 }
             }
-            //return i1 == j1 + 1;
+            return i1 == j1 + 1;
         }
 
         void OneCodeMathAdd(ref int[] bytearray, int i, int j)
