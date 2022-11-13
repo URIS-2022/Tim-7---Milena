@@ -32,7 +32,6 @@ namespace FastReport
             }
             set
             {
-                null = value;
             }
         }
 

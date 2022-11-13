@@ -217,7 +217,7 @@ namespace FastReport.Barcode.QRCode
 
     class QRSberBank : QRData
     {
-        char readonly Separator = '|';
+        char Separator = '|';
 
         private string FormatIdentifier="ST";
         public string VersionStandart = "0001";
