@@ -934,7 +934,7 @@ namespace FastReport
         public virtual void InitializeComponent()
         {
             // update the component's style
-            Style = Style;
+           
             Fill.InitializeComponent();
         }
 
