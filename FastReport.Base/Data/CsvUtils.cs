@@ -94,7 +94,7 @@ namespace FastReport.Data
         internal static List<string> ReadLines(CsvConnectionStringBuilder builder, int maxLines = 0)
         {
             if (String.IsNullOrEmpty(builder.CsvFile) || String.IsNullOrEmpty(builder.Separator))
-                return null;
+                return new List<string>();
 
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
