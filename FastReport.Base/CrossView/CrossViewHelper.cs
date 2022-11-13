@@ -397,7 +397,6 @@ namespace FastReport.CrossView
         private void PrintXAxisFieldsCaption()
         {
             int top = (CrossView.ShowTitle ? 1 : 0);
-            int templateTop = titleDescriptor.TemplateRow != null ? 1 : 0;
             string captions = "";
             for (int i = 0; i < CrossView.Data.XAxisFieldsCount; i++)
             {
