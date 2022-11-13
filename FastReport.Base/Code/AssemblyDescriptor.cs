@@ -724,8 +724,9 @@ namespace FastReport.Code
                     if (Directory.Exists(bin_directory))
                         currentFolder = bin_directory;
                 }
-                catch
+                catch (Exception e)
                 {
+                    Console.WriteLine(e);
                 }
             }       
         }
