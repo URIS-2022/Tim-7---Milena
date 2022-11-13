@@ -267,7 +267,7 @@ namespace FastReport.CrossView
 
         private void InitResultTable()
         {
-            //todo
+            
             TableColumn column;
             CrossViewDescriptor descr;
             for (int i = 0; i < headerWidth + resultBodyWidth; i++)
