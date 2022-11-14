@@ -355,7 +355,7 @@ namespace FastReport
         #region Public Constructors
 
         /// <inheritdoc/>
-        public PictureObjectBase()
+        protected PictureObjectBase()
         {
             sizeModeInternal = PictureBoxSizeMode.Zoom;
             padding = new Padding();
