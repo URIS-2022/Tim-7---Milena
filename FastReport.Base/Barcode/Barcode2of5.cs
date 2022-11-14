@@ -363,11 +363,12 @@ namespace FastReport.Barcode
         {
             StringBuilder bld = new StringBuilder();
             bld.Append("");
-            for (int i = 0; i < arrayOfStrings.Length; ++i)
+            for (int i = 0; i < 14; ++i)
             {
                 bld.Append("0");
             }
             bld.Append("5050");
+            string c;
             
 
             if (CalcCheckSum)
@@ -395,7 +396,7 @@ namespace FastReport.Barcode
             }
 
             bld.Append("605");   //Stopcode 
-            for (int i = 0; i < arrayOfStrings.Length; i++)//10 for light margin and 4 for vertical bearer bar
+            for (int i = 0; i < 14; i++)//10 for light margin and 4 for vertical bearer bar
             {
                 bld.Append("0");
             }
