@@ -109,7 +109,7 @@ namespace FastReport.Import.DevExpress
                 if (style.Name == stylename)
                 {
                     if (stylePriority == null || !AttributeExist(stylePriority, "UseFont"))
-                        if (component as TextObject != null)
+                        if (component is TextObject != null)
                             (component as TextObject).Font = style.Font;
                     
                     if ((stylePriority == null || !AttributeExist(stylePriority, "UseTextAlignment")) && component is TextObject)
