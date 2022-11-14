@@ -108,8 +108,7 @@ namespace FastReport.Data
             {
                 return result as DataComponentBase;
             }
-            if (fullNames.TryGetValue(alias, out result))
-                if (result is DataSourceBase)
+            if (fullNames.TryGetValue(alias, out result) && (result is DataSourceBase))
                     return result as DataComponentBase;
             return null;
         }
