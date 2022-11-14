@@ -10,7 +10,7 @@ namespace FastReport.Engine
     {
         #region Private Classes
 
-        private class HierarchyItem
+        private sealed class HierarchyItem
         {
             #region Fields
 
