@@ -51,7 +51,7 @@ namespace FastReport.Import.RDL
         /// <summary>
         /// The number of pixels in one millimeter.
         /// </summary>
-        public static float Millimeter = FastReport.Utils.Units.Millimeters;
+        public static readonly float Millimeter = FastReport.Utils.Units.Millimeters;
         
         /// <summary>
         /// The number of pixels in one centimeter.
