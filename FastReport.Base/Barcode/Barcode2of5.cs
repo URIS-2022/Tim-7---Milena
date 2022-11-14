@@ -399,7 +399,7 @@ namespace FastReport.Barcode
             {
                 bld.Append("0");
             }
-            return bld.ToString;
+            return bld.ToString();
         }
 
         internal override void DrawText(IGraphics g, string data)
