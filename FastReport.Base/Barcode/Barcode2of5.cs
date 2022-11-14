@@ -361,13 +361,14 @@ namespace FastReport.Barcode
         #region Internal Methods
         internal override string GetPattern()
         {
-            string result = "";   // Startcode
-            for (int i = 0; i < 14; ++i)//10 for light margin and 4 for vertical bearer bar
+            StringBuilder bld = new StringBuilder();
+            bld.Append("");
+            for (int i = 0; i < arrayOfStrings.Length; ++i)
             {
-                result += "0";
+                bld.Append("0");
             }
-            result += "5050";
-            string c;
+            bld.Append("5050");
+            string result = bld.ToString();
 
             if (CalcCheckSum)
             {
