@@ -897,7 +897,7 @@ namespace FastReport.Import.DevExpress
                 // The same situation with levels
                 if (headerLevel == -1 && i != 0)
                     headerLevel = -2;
-                string footerName = subBands.Where(x => GetLevelPropValue(GetObjectDescription(x)) == headerLevel && GetBandType(x).Equals(GROUP_FOOTER_BAND_MASK)).FirstOrDefault();
+                string footerName = subBands.FirstOrDefault(x => GetLevelPropValue(GetObjectDescription(x)) == headerLevel && GetBandType(x).Equals(GROUP_FOOTER_BAND_MASK));
                 LoadDetailReportGroupFooterBand(groupHeader, footerName);
                 curLevel++;
             }
