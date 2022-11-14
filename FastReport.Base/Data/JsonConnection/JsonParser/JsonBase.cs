@@ -49,7 +49,7 @@ namespace FastReport
             }
             set
             {
-                //Remember to add something meaningful for future developers!
+                key = (string)value;
             }
         }
 
