@@ -826,21 +826,6 @@ namespace FastReport.Import.RDL
             }
         }
 
-        private XmlNode GetEmbededImageNode(string objectName)
-        {
-            foreach(XmlNode node in reportNode.ChildNodes)
-            {
-                if(node.Name == "EmbeddedImages")
-                {
-                    foreach (XmlNode embededImage in node.ChildNodes)
-                    {
-                        if (embededImage.Attributes[0].InnerText == objectName)
-                            return embededImage;
-                    }
-                }
-            }
-            return null;
-        }
 
         private void LoadReport(XmlNode reportNode)
         {
