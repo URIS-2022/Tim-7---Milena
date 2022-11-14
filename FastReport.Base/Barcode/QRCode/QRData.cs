@@ -42,7 +42,7 @@ namespace FastReport.Barcode.QRCode
             else if (data.StartsWith("WIFI:"))
                 return new QRWifi(data);
             else if (Uri.IsWellFormedUriString(data, UriKind.Absolute))
-                return new QRURI(data);
+                return new Qruri(data);
             else if (Regex.IsMatch(data, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
                 return new QREmailAddress(data);
             else if (data.StartsWith("SPC"))
@@ -178,10 +178,10 @@ namespace FastReport.Barcode.QRCode
         }
     }
 
-    class QRURI : QRData
+    class Qruri : QRData
     {
-        public QRURI() : base() { }
-        public QRURI(string data) : base(data) { }
+        public Qruri() : base() { }
+        public Qruri(string data) : base(data) { }
     }
 
     class QREmailAddress : QRData
