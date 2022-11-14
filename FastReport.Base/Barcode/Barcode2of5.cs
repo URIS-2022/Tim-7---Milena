@@ -368,7 +368,7 @@ namespace FastReport.Barcode
                 bld.Append("0");
             }
             bld.Append("5050");
-            string result = bld.ToString();
+            
 
             if (CalcCheckSum)
             {
@@ -384,22 +384,22 @@ namespace FastReport.Barcode
                         c = "6";
                     else
                         c = "5";
-                    result += c;
+                    bld.Append(c);
 
                     if (tabelle_2_5[CharToInt(base.text[i * 2 + 1]), j] == 1)
                         c = "1";
                     else
                         c = "0";
-                    result += c;
+                    bld.Append(c);
                 }
             }
 
-            result += "605";   //Stopcode 
-            for (int i = 0; i < 14; i++)//10 for light margin and 4 for vertical bearer bar
+            bld.Append("605");   //Stopcode 
+            for (int i = 0; i < arrayOfStrings.Length; i++)//10 for light margin and 4 for vertical bearer bar
             {
-                result += "0";
+                bld.Append("0");
             }
-            return result;
+            return bld.ToString;
         }
 
         internal override void DrawText(IGraphics g, string data)
