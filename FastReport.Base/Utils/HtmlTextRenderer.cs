@@ -2258,7 +2258,7 @@ namespace FastReport.Utils
                     List<CharWithIndex> list = new List<CharWithIndex>();
                     for (int i = point; i < size; i++)
                         list.Add(chars[i]);
-                    secondPart = new RunText(renderer, word, style, list, left + r.Width, charIndex);
+                    secondPart = new RunText(renderer, word, style, list, left, charIndex);
                     list.Clear();
                     for (int i = 0; i < point; i++)
                         list.Add(chars[i]);
