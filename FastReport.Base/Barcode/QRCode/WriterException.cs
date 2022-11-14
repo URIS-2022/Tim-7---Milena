@@ -27,9 +27,13 @@ namespace FastReport.Barcode.QRCode
   /// </author>*/
   public sealed class WriterException:System.Exception
   {
-    
+
+    ///<Summary>
+    /// Gets the answer
+    ///</Summary>
     public WriterException():base()
     {
+
     }
     
     public WriterException(System.String message):base(message)
