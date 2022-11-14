@@ -177,10 +177,7 @@ namespace FastReport
         /// </summary>
         [Category("Build")]
         public string BeforeLayoutEvent
-        {
-            get { return beforeLayoutEvent; }
-            set { beforeLayoutEvent = value; }
-        }
+        { get; set; }
 
         /// <summary>
         /// Gets or sets a script event name that will be fired after the child objects layout was finished.
