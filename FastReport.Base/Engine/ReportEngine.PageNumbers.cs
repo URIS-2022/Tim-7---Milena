@@ -6,7 +6,7 @@ namespace FastReport.Engine
     {
         #region Private Classes
 
-        private class PageNumberInfo
+        private sealed class PageNumberInfo
         {
             #region Fields
 
