@@ -820,7 +820,7 @@ namespace FastReport.Import.DevExpress
 
         private void LoadDetailBandInDetailReport(List<string> bands, BandBase data)
         {
-            string detailName = bands.Where(x => IsTypeOfBand(x, DETAIL_BAND_MASK)).FirstOrDefault();
+            string detailName = bands.FirstOrDefault(x => IsTypeOfBand(x, DETAIL_BAND_MASK));
             if (String.IsNullOrEmpty(detailName))
                 return;
             string detailDescription = GetObjectDescription(detailName);
