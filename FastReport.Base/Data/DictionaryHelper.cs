@@ -104,10 +104,9 @@ namespace FastReport.Data
         private DataComponentBase FindByAlias(string alias)
         {
             Base result = null;
-            if (aliases.TryGetValue(alias, out result))
+            if (aliases.TryGetValue(alias, out result) && (result is DataConnectionBase || result is Relation))
             {
-                if ((result is DataConnectionBase || result is Relation))
-                    return result as DataComponentBase;
+                return result as DataComponentBase;
             }
             if (fullNames.TryGetValue(alias, out result))
                 if (result is DataSourceBase)
