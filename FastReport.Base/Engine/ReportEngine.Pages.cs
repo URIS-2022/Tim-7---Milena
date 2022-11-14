@@ -74,7 +74,7 @@ namespace FastReport.Engine
             {
                 expressionObj = Report.Calc(Code.CodeUtils.FixExpressionWithBrackets(expression));
             }
-            if (expressionObj != null && expressionObj is bool)
+            if (expressionObj is bool)
             {
                 if (!expression.Contains("TotalPages"))
                 {
