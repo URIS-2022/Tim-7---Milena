@@ -1331,7 +1331,7 @@ namespace FastReport.Barcode
       int maxErr, lenErr, tot, pad;
       
       if (bytes == null)
-        throw new ArgumentNullException("Text cannot be null.");
+        throw new ArgumentNullException("bytes");
       if (bytes.Length > ABSOLUTE_MAX_TEXT_SIZE)
       {
         throw new ArgumentOutOfRangeException("The text is too big.");
