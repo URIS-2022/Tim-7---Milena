@@ -303,10 +303,10 @@ namespace FastReport.Barcode
             return i;
         }
 
-        bool OneCodeMathMultiply(ref int[] bytearray, int i, int j)
+        void OneCodeMathMultiply(ref int[] bytearray, int i, int j)
         {
-            if (bytearray == null) return false;
-            if (i < 1) return false;
+            if (bytearray == null) return;
+            if (i < 1) return;
             int l = 0;
             int k = 0;
             for (k = i - 1; k >= 1; k += -2)
@@ -317,7 +317,7 @@ namespace FastReport.Barcode
                 l = x >> 16;
             }
             if (k == 0) bytearray[0] = (bytearray[0] * j + l) & 255;
-            return true;
+            return;
         }
 
         int OneCodeMathReverse(int i)
