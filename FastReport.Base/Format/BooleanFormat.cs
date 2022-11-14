@@ -53,10 +53,6 @@ namespace FastReport.Format
     }
 
     /// <inheritdoc/>
-    public override int GetHashCode()
-    {
-      return base.GetHashCode();
-    }
 
     /// <inheritdoc/>
     public override string FormatValue(object value)
