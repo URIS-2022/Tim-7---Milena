@@ -1253,8 +1253,9 @@ namespace FastReport.Barcode
           }
         }
       }
+      bool check = (v = segmentList.Get(0)).type == 'T';
       // check if all numbers
-      if (segmentList.Size == 1 && (v = segmentList.Get(0)).type == 'T' && GetSegmentLength(v) >= 8)
+      if (segmentList.Size == 1 && check && GetSegmentLength(v) >= 8)
       {
         for (k = v.start; k < v.end; ++k)
         {
