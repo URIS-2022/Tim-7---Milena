@@ -822,9 +822,6 @@ namespace FastReport.Import.RDL
                     {
                         parameter.Description = subNode.InnerText;
                     }
-                    else if (subNode.Name == "DefaultValue")
-                    {
-                    }
                 }
             }
         }
