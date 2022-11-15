@@ -194,7 +194,7 @@ namespace FastReport.Data
 
         if (value is string)
         {
-          string strValue = (string)value;
+          string strValue = value as string;
           string elementValue = element.Value == null ? "" : element.Value.ToString();
 
           switch (element.Operation)
