@@ -303,7 +303,7 @@ namespace FastReport.Barcode
                     throw new SwissQrCodeContactException(res.Get("SwissAddressLine2Error"));
                 if (houseNumberOrAddressline2.Length > 70)
                     throw new SwissQrCodeContactException(String.Format(res.Get("SwissLengthMore"), "Address line 2", 71));
-                if (!string.IsNullOrEmpty(houseNumberOrAddressline2) && !Regex.IsMatch(houseNumberOrAddressline2, charsetPattern))
+                if (!Regex.IsMatch(houseNumberOrAddressline2, charsetPattern))
                     throw new SwissQrCodeContactException(String.Format(res.Get("SwissPatternError"), "Address line 2") + charsetPattern);
                 this.houseNumberOrAddressline2 = houseNumberOrAddressline2;
             }
