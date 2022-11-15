@@ -69,12 +69,7 @@ namespace FastReport.Code
         /// <summary>
         /// The last found expression.
         /// </summary>
-        public string FoundText
-        {
-            get { return foundText;  }
-            set { foundText = value; }
-        }
-     
+        public string FoundText { get; set; }
     }
 
     /// <summary>
