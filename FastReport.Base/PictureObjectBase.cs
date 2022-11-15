@@ -402,7 +402,6 @@ namespace FastReport
             }
             catch (UriFormatException)
             {
-                // TODO
                 // the problem with linux???? PATH!!!
 
                 string path;
