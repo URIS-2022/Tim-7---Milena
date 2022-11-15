@@ -653,11 +653,14 @@ namespace FastReport
         /// <param name="value">New parent.</param>
         public virtual void SetParent(Base value)
         {
-            if (value != null && !(value is IParent) || !(value as IParent).CanContain(this))
+            if (value != null)
             {
-                throw new ParentException(value, this);
+                if (!(value is IParent) || !(value as IParent).CanContain(this))
+                {
+                    throw new ParentException(value, this);
+                }
+                SetParentCore(value);
             }
-            SetParentCore(value);
         }
 
         /// <summary>
