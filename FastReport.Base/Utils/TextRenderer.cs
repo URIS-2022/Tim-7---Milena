@@ -2621,7 +2621,7 @@ namespace FastReport.Utils
             }
         }
 
-        // TODO: override a finalizer only if Dispose(bool disposing) above has code to free unmanaged resources.
+        // 
         // ~InlineImageCache() {
         //   // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
         //   Dispose(false);
