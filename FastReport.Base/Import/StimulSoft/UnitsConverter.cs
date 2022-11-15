@@ -669,19 +669,6 @@ namespace FastReport.Import.StimulSoft
                 case "Stimulsoft.Report.BarCodes.StiPharmacodeBarCodeType":
                     barcode.Barcode = new BarcodePharmacode();
                     break;
-
-                
-                
-                
-                case "Stimulsoft.Report.BarCodes.StiFIMBarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiCode11BarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiUpcEBarCodeType":
-               
-                case "Stimulsoft.Report.BarCodes.StiJan13BarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiJan8BarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiSSCC18BarCodeType":
-                case "Stimulsoft.Report.BarCodes.StiIsbn10BarCodeType":
-                
                 default:
                     barcode.Barcode = new Barcode39();
                     break;
