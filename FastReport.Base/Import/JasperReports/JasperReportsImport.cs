@@ -1140,6 +1140,7 @@ namespace FastReport.Import.JasperReports
             Report = report;
             Report.Clear();
             System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
+            doc.XmlResolver = null;
             doc.Load(filename);
             reportNode = doc.LastChild;
             LoadReport();
