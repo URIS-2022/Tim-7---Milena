@@ -45,12 +45,6 @@ namespace FastReport.Barcode.Aztec
          this.mode = mode;
          this.binaryShiftByteCount = binaryBytes;
          this.bitCount = bitCount;
-         // Make sure we match the token
-         //int binaryShiftBitCount = (binaryShiftByteCount * 8) +
-         //    (binaryShiftByteCount == 0 ? 0 :
-         //     binaryShiftByteCount <= 31 ? 10 :
-         //     binaryShiftByteCount <= 62 ? 20 : 21);
-         //assert this.bitCount == token.getTotalBitCount() + binaryShiftBitCount;
       }
 
       public int Mode
