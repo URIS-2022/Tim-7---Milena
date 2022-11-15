@@ -1702,11 +1702,11 @@ namespace FastReport
         /// </remarks>
         public void ApplyStyles()
         {
-            foreach (Base c in AllObjects)
+            /*foreach (Base c in AllObjects)
             {
                 if (c is ReportComponentBase)
                     (c as ReportComponentBase).Style = (c as ReportComponentBase).Style;
-            }
+            }*/
         }
 
         /// <summary>
