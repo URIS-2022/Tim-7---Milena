@@ -245,7 +245,7 @@ namespace FastReport.Utils
             set
             {
                 if (OnEnableScriptSecurityChanged != null)
-                    OnEnableScriptSecurityChanged.Invoke(null, null);
+                    OnEnableScriptSecurityChanged.Invoke(EventArgs.Empty, EventArgs.Empty);
                 enableScriptSecurity = value;
                 // 
                 userSetsScriptSecurity = true;
