@@ -59,7 +59,7 @@ namespace FastReport.Format
     {
       if (value is Variant)
         value = ((Variant)value).Value;
-      if (value is bool && (bool)value == false)
+      if (value is bool)
         return FalseText;
       if (value is bool && (bool)value == true)
         return TrueText;
