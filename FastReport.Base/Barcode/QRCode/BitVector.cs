@@ -95,7 +95,7 @@ namespace FastReport.Barcode.QRCode
                     sizeInBits -= 8;
                 }
                 // Modify the last byte.
-                array[sizeInBits >> 3] |= (sbyte)((bit << (7 - numBitsInLastByte)));
+                array[sizeInBits >> 3] |= (sbyte)(bit << (7 - numBitsInLastByte));
                 ++sizeInBits;
             }
     }
