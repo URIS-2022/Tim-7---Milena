@@ -311,11 +311,7 @@ namespace FastReport
     /// Gets or sets a shadow width, in pixels.
     /// </summary>
     [DefaultValue(4f)]
-    public float ShadowWidth
-    {
-      get { return shadowWidth; }
-      set { shadowWidth = value; }
-    }
+    public float ShadowWidth { get; set; }
 
     /// <summary>
     /// Gets or sets a shadow color.
