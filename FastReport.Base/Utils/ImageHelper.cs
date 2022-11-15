@@ -296,7 +296,7 @@ namespace FastReport.Utils
                 iconWriter.Write((int)memoryStream.Length);
 
                 // 12-15 offset of image data
-                iconWriter.Write((int)(6 + 16));
+                iconWriter.Write(6 + 16);
 
                 // write image data
                 // png data must contain the whole png data file
