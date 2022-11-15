@@ -239,7 +239,10 @@ namespace FastReport.Code
                     {
                         return Assembly.ReflectionOnlyLoad(assemblyName.FullName).Location;
                     }
-                    catch { }
+                    catch(Exception e) 
+                    {
+                        Console.WriteLine("ERROR!");
+                    }
                 }
             }
 
