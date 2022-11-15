@@ -2974,7 +2974,7 @@ namespace FastReport.Utils
 #endregion Public Methods
         }
 
-        private class OwnHashSet<T>
+        private sealed class OwnHashSet<T>
         {
 #if DOTNET_4
             private HashSet<T> internalHashSet;
