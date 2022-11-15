@@ -2275,7 +2275,7 @@ namespace FastReport.Utils
                 return true;
             if (src.StartsWith("https://"))
                 return true;
-            if (src.StartsWith("data:") && src.IndexOf("base64,") > 0)
+            if (src.StartsWith("data:") && src.IndexOf("base64,") >= 0)
                 return true;
             return false;
         }
