@@ -317,7 +317,7 @@ namespace FastReport.Barcode
                 l = x >> 16;
             }
             if (k == 0) bytearray[0] = (bytearray[0] * j + l) & 255;
-            return;
+            
         }
 
         int OneCodeMathReverse(int i)
