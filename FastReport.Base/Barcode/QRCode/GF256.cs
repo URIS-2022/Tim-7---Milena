@@ -96,7 +96,7 @@ namespace FastReport.Barcode.QRCode
     {
       if (degree < 0)
       {
-        throw new System.ArgumentException();
+        throw new System.ArgumentException("Exception");
       }
       if (coefficient == 0)
       {
