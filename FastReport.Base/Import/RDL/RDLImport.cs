@@ -920,6 +920,7 @@ namespace FastReport.Import.RDL
             Report = report;
             Report.Clear();
             XmlDocument document = new XmlDocument();
+            document.XmlResolver = null;
             document.Load(content);
             reportNode = document.LastChild;
             defaultFontFamily = "";
