@@ -689,7 +689,7 @@ namespace FastReport
                 obj.OnBeforePrint(EventArgs.Empty);
             }
 
-            //Report.Engine.TranslatedObjectsToBand(this);
+         
 
             // apply even style
             if (RowNo % 2 == 0)
