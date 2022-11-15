@@ -81,7 +81,7 @@ namespace FastReport.Utils
                 encodings.Add(new MyEncodingInfo(info));
             }
 
-            encodings.Sort(new Comparison<MyEncodingInfo>(compareEncoding)); ;
+            encodings.Sort(new Comparison<MyEncodingInfo>(compareEncoding));
 
             return encodings;
         }
