@@ -6,7 +6,7 @@ namespace FastReport.Utils
     {
         private static void ProcessMainAssembly()
         {
-            new AssemblyInitializer();
+            //new AssemblyInitializer();
         }
 
     }
