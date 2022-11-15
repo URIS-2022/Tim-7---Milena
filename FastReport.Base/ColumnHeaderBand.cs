@@ -27,7 +27,7 @@ namespace FastReport
     public new bool PrintOnBottom
     {
       get { return base.PrintOnBottom; }
-      set { base.PrintOnBottom = value; }
+      set { PrintOnBottom = value; }
     }
     #endregion
 
