@@ -203,12 +203,9 @@ namespace FastReport.Barcode.QRCode
             }
             
             // Skip masking if mask_pattern is -1.
-            if (maskPattern != - 1)
+            if (maskPattern != - 1 && MaskUtil.getDataMaskBit(maskPattern, xx, y))
             {
-              if (MaskUtil.getDataMaskBit(maskPattern, xx, y))
-              {
                 bit ^= 0x1;
-              }
             }
             matrix.set_Renamed(xx, y, bit);
           }
