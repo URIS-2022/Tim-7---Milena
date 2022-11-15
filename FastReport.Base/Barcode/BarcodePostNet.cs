@@ -43,7 +43,7 @@ namespace FastReport.Barcode
     public class BarcodeJapanPost4StateCode : LinearBarcodeBase
     {
         private readonly string CeckDigitSet = "0123456789-abcdefgh";
-        private string EncodeTable = "1234567890-abcdefgh";
+        private readonly string EncodeTable = "1234567890-abcdefgh";
         private static string[] JapanTable =
         {
             "6161E", //1
