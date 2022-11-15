@@ -827,7 +827,7 @@ namespace FastReport.Data
         /// <summary>
         /// Initializes a new instance of the <see cref="DataConnectionBase"/> class with default settings.
         /// </summary>
-        public DataConnectionBase()
+        protected DataConnectionBase()
         {
             tables = new TableCollection(this);
             connectionString = "";
