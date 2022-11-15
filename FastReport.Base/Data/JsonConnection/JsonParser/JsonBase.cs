@@ -440,21 +440,13 @@ namespace FastReport
                     throw reader.ThrowEOF('+', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
 
                 bool signed = false;
-                if (reader.Char == '+')
+                if (reader.Char == '+' || reader.Char == '-')
                 {
                     reader.ReadNext();
                     signed = true;
                     if (reader.IsEOF)
                         throw reader.ThrowEOF('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
                 }
-                else if (reader.Char == '-')
-                {
-                    reader.ReadNext();
-                    signed = true;
-                    if (reader.IsEOF)
-                        throw reader.ThrowEOF('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
-                }
-
                 if (reader.Char < '0' || '9' < reader.Char)
                 {
                     if (signed)
