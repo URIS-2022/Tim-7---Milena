@@ -136,7 +136,7 @@ namespace FastReport.Data
             }
 
             if (response == null)
-                return null;
+                return new List<string>();
 
             List<string> lines = new List<string>();
             if (maxLines == 0)
