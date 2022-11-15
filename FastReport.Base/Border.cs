@@ -305,11 +305,7 @@ namespace FastReport
     /// Gets or sets a value determines whether to draw a shadow.
     /// </summary>
     [DefaultValue(false)]
-    public bool Shadow
-    {
-      get { return shadow; }
-      set { shadow = value; }
-    }
+    public bool Shadow { get; set; }
 
     /// <summary>
     /// Gets or sets a shadow width, in pixels.
