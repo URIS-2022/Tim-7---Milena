@@ -605,6 +605,7 @@ namespace FastReport.Import.RDL
             if (!String.IsNullOrEmpty(subFilename))
             {
                 XmlDocument doc = new XmlDocument();
+                doc.XmlResolver = null;
                 doc.Load(subFilename);
                 reportNode = doc.LastChild;
                 ReportPage tempPage = page;
