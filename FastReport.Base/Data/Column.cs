@@ -370,7 +370,7 @@ namespace FastReport.Data
     {
       if (Calculated)
         return new string[] { Expression };
-      return null;
+      return new string[] {};
     }
     #endregion
 
