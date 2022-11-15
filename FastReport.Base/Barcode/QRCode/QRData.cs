@@ -351,7 +351,7 @@ namespace FastReport.Barcode.QRCode
             if (!String.IsNullOrWhiteSpace(RegType)) result += Separator + "RegType=" + RegType;
             if (!String.IsNullOrWhiteSpace(UIN)) result += Separator + "UIN=" + UIN;
             if (!String.IsNullOrWhiteSpace(TechCode)) result += Separator + "TechCode=" + TechCode;
-                return result;
+            return result;
         }
         public override void Unpack(string data)
         {
