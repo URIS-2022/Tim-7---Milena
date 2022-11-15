@@ -1032,6 +1032,7 @@ namespace FastReport.Import.DevExpress
             try
             {
                 devDoc = new System.Xml.XmlDocument();
+                devDoc.XmlResolver = null;
                 devDoc.LoadXml(devText);
             }
             catch {
