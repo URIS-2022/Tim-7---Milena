@@ -700,7 +700,7 @@ namespace FastReport.Import.DevExpress
                 if(i == 0)
                     header = headers.FirstOrDefault(x => GetAttribute(x, "Level") == string.Empty);
                 else
-                    header = headers.Where(x => GetAttribute(x, "Level") == level.ToString()).FirstOrDefault();
+                    header = headers.FirstOrDefault(x => GetAttribute(x, "Level") == level.ToString());
 
                 GroupHeaderBand headerBand = LoadDetailReportGroupHeader(header, data);
 
