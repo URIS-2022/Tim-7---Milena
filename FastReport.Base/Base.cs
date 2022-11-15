@@ -1033,7 +1033,7 @@ namespace FastReport
         /// </remarks>
         public virtual string[] GetExpressions()
         {
-            return null;
+            return new string[] {};
         }
 
         /// <summary>
