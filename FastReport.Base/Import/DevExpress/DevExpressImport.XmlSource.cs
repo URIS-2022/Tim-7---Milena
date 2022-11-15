@@ -709,7 +709,7 @@ namespace FastReport.Import.DevExpress
 
                 string headerLevel = GetAttribute(header, "Level");
 
-                XmlNode footer = footers.Where(x => GetAttribute(x, "Level").Equals(headerLevel)).FirstOrDefault();
+                XmlNode footer = footers.FirstOrDefault(x => GetAttribute(x, "Level").Equals(headerLevel));
                 LoadDetailReportGroupFooter(footer, headerBand);
 
             }
