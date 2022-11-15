@@ -43,7 +43,8 @@ namespace FastReport.CrossView
         /// <summary>
         /// 
         /// </summary>
-        public int MeasureIndex;
+        private int measureIndex;
+        public int MeasureIndex { get; set; }
         /// <summary>
         /// 
         /// </summary>
