@@ -1118,15 +1118,15 @@ namespace FastReport
 
             if (c != this)
             {
-                if (c.IsHaveToConvert(sender))
+                if (c.IsHaveToConvert(sender) && convertValue < 10)
                 {
-                    if (convertValue < 10)
-                    {
+                    
+                    
                         foreach (Base b in c.GetConvertedObjects())
                             EnumAllConvectedObjects(sender, b, list, convertValue + 1);
                         return;
 
-                    }
+                    
                 }
                 list.Add(c);
             }
