@@ -35,7 +35,7 @@ namespace FastReport.Barcode.Aztec
       public static readonly GenericGF QR_CODE_FIELD_256 = new GenericGF(0x011D, 256, 0); // x^8 + x^4 + x^3 + x^2 + 1
       public static readonly GenericGF DATA_MATRIX_FIELD_256 = new GenericGF(0x012D, 256, 1); // x^8 + x^5 + x^3 + x^2 + 1
       public readonly static GenericGF AZTEC_DATA_8 = DATA_MATRIX_FIELD_256;
-      public static GenericGF MAXICODE_FIELD_64 = AZTEC_DATA_6;
+      public readonly static GenericGF MAXICODE_FIELD_64 = AZTEC_DATA_6;
 
       private readonly int[] expTable;
       private readonly int[] logTable;
